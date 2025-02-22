@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{ .Site.Title }}</title>
+    <link rel="stylesheet" href="/css/style.css">
+    {{ partial "head.html" . }}
+</head>
+
+<body>
+    {{ partial "header.html" . }}
+    <main>
+        <div class="sections-container">
+            <section id="about">
+                <h2>About Me</h2>
+                {{ .Content | safeHTML }}
+            </section>
+            <section id="mywork">
+                <h2>My Work</h2>
+                {{ .Content | safeHTML }}
+            </section>
+            <section id="til">
+                <h2>Today I Learned (TIL)</h2>
+                <ul>
+                    {{ $tilSection := .Site.GetPage "section" "til" }}
+                    {{ range $tilSection.Pages }}
+                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                    {{ end }}
+                </ul>
+            </section>
+        </div>
+    </main>
+    {{ partial "footer.html" . }}
+</body>
+
+</html>
