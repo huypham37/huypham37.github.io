@@ -6,19 +6,18 @@ draft: false
 
 {{< myimg src="/img/portrait.jpeg" alt="Your Portrait" width="300" height="400" >}}
 
+## I’m Steve. Deal with It.
 
-## Hello! I'm [Your Name]
+I’m a Computer Science student at Maastricht University, where I write code that doesn’t suck and bend AI to my will for personal knowledge management (PKM) and productivity hacks. Before this, I wasted three years in precision mechanics—turns out, wrenches are just primitive debuggers.
 
-Here you can introduce yourself, tell your story, and describe your skills.
+### Stack Trace
 
-### Background
+I’ve got a degree in Automation and Robotics from Centennial College, where I wrestled PLCs, SCADA systems, and industrial robots into submission. It was fine, if you like legacy hardware and zero abstraction layers. Now I’m at Maastricht, upgrading my kernel to CS and leaving the meatspace tinkering behind.
 
-I hold a degree in [Your Degree] from [Your University], where I developed a strong foundation in computer science principles. Over the years, I have worked on various projects that have honed my skills in [mention relevant skills or technologies].
+### Running Processes
 
-### Interests
+When I’m not optimizing uni’s subpar assignments, I’m building CLI tools—because real devs type, and GUIs are for peasants who can’t handle a terminal. I engineer PKM systems for maximum signal-to-noise and train AI to do the heavy lifting so I don’t have to. Mediocrity’s a memory leak—I’m here to garbage-collect it. 
 
-In addition to my professional work, I enjoy exploring new technologies, contributing to open-source projects, and sharing knowledge through my "Today I Learned" (TIL) entries. I believe in the power of community and collaboration in the tech industry.
+### SSH Access
 
-### Connect with Me
-
-Feel free to reach out to me on [GitHub](your-github-link) or [LinkedIn](your-linkedin-link). I am always open to discussing new ideas, collaborations, or just sharing insights about technology!
+If you’ve got something, hit me on [GitHub](https://github.com/huypham37?tab=overview&from=2025-02-01&to=2025-02-27). I might respond, unless your idea’s a 404 or you’re pushing untested commits. Fair warning: I don’t suffer fools, bad code, or mouse-clickers.

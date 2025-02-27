@@ -6,8 +6,22 @@
     <description>Recent content on Your Name - Website</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 23 Feb 2025 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Feb 2025 12:30:00 +0000</lastBuildDate>
     <atom:link href="//localhost:1313/til/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pipelining vs Concurrency: Understanding the Difference</title>
+      <link>//localhost:1313/til/pipelining-concurrency/</link>
+      <pubDate>Sun, 23 Feb 2025 12:30:00 +0000</pubDate>
+      <guid>//localhost:1313/til/pipelining-concurrency/</guid>
+      <description>&lt;p&gt;Today I learned about the key differences between pipelining and concurrency:&lt;/p&gt;&#xA;&lt;h2 id=&#34;pipelining&#34;&gt;Pipelining&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Low-level Hardware Technique:&lt;/strong&gt; Breaks down instruction execution into stages like fetch, decode, execute, memory access, and write-back.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Assembly Line Approach:&lt;/strong&gt; Multiple instructions are processed simultaneously with each in a different stage, enabling a new instruction per clock cycle.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Improved Throughput:&lt;/strong&gt; Enhances processing without the need to increase the clock speed.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;concurrency&#34;&gt;Concurrency&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Higher-level Concept:&lt;/strong&gt; Deals with multiple computations happening during overlapping time periods.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Various Models:&lt;/strong&gt; Implemented via multithreading, multiprocessing, or asynchronous programming.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Design Focus:&lt;/strong&gt; Emphasizes logical task parallelism and efficient program design rather than instruction-level execution.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;key-distinction&#34;&gt;Key Distinction&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Pipelining:&lt;/strong&gt; Implemented in the CPU hardware, focusing on instruction-level parallelism.&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Concurrency:&lt;/strong&gt; Managed by software and operating systems to run multiple tasks simultaneously.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Understanding these concepts helps align hardware execution with software design for more efficient systems.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Computing π with OpenMP</title>
+      <link>//localhost:1313/til/third-til/</link>
+      <pubDate>Sun, 23 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>//localhost:1313/til/third-til/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Numerical Integration for π:&lt;/strong&gt;&lt;br&gt;&#xA;The function computes π by integrating the function &lt;code&gt;4/(1+x^2)&lt;/code&gt; over [0,1] using a Riemann sum with midpoints.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Timing with std::chrono:&lt;/strong&gt;&lt;br&gt;&#xA;The duration for the computation is measured using C++11&amp;rsquo;s &lt;code&gt;&amp;lt;chrono&amp;gt;&lt;/code&gt; utilities.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;using-openmp&#34;&gt;Using OpenMP&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Parallel Region:&lt;/strong&gt;&lt;br&gt;&#xA;The computation is performed inside an OpenMP parallel region where each thread calculates a partial sum.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Local Sum per Thread:&lt;/strong&gt;&lt;br&gt;&#xA;Each thread uses its own &lt;code&gt;local_sum&lt;/code&gt; variable to accumulate values from its portion of the loop. This prevents race conditions.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>std::cout is Not Thread-Safe: Using stringstream for Safe Multithreaded Output in C&#43;&#43;</title>
       <link>//localhost:1313/til/second-til/</link>

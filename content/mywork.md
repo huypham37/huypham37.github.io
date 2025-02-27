@@ -1,23 +1,6 @@
 ## Projects
 
-### Project 1: Project Name
-- **Description:** Brief description of the project, its purpose, and technologies used.
-- **Link:** [Live Demo](http://example.com) | [GitHub Repository](http://github.com/example)
+### TaskStack: CLI Task Management System
+- **Description:** A command-line task management system with intelligent faceted tagging capabilities. Built with Rust, it features AI-assisted tagging using Ollama and LLM models, structured tag dimensions (priority, status, category, owner, deadline, effort), and powerful tag-based search functionality.
+- **Link:** [GitHub Repository](https://github.com/huypham37/taskstack)
 
-### Project 2: Project Name
-- **Description:** Brief description of the project, its purpose, and technologies used.
-- **Link:** [Live Demo](http://example.com) | [GitHub Repository](http://github.com/example)
-
-### Work Experience
-
-#### Job Title at Company Name
-- **Duration:** Month Year - Month Year
-- **Responsibilities:** 
-  - Key responsibility or achievement.
-  - Another responsibility or achievement.
-
-#### Job Title at Company Name
-- **Duration:** Month Year - Month Year
-- **Responsibilities:** 
-  - Key responsibility or achievement.
-  - Another responsibility or achievement.
