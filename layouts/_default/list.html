@@ -1,23 +1,26 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <title>{{ .Site.Title }}</title>
+    <title>{{ .Title }} - Tag</title>
     <link rel="stylesheet" href="/css/style.css">
     {{ partial "head.html" . }}
 </head>
+
 <body>
     {{ partial "header.html" . }}
     <main>
-        <h1>{{ .Title }}</h1>
-        <ul>
+        <h1>Tag: {{ .Title }}</h1>
+        <ul class="post-list">
             {{ range .Pages }}
-                <li>
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                    <p>{{ .Summary }}</p>
-                </li>
+            <li>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                <span class="date">{{ .Date.Format "January 2, 2006" }}</span>
+            </li>
             {{ end }}
         </ul>
     </main>
     {{ partial "footer.html" . }}
 </body>
+
 </html>

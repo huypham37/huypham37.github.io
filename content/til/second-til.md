@@ -2,6 +2,7 @@
 title: "std::cout is Not Thread-Safe: Using stringstream for Safe Multithreaded Output in C++"
 date: "2025-02-23T12:00:00Z"
 draft: false
+tags: ["cpp", "multithreading"]
 ---
 
 Today I learned that `std::cout` is not thread-safe by default. When multiple threads try to write to `std::cout` simultaneously, the output can become jumbled and garbled due to race conditions.

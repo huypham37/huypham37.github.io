@@ -2,9 +2,8 @@
 title: "Non-Agentic vs. Agentic AI: Beyond the Generative Hype"
 date: "2025-02-24T13:00:00Z"
 draft: false
+tags: ["ai", "generative-ai", "agentic-ai"]
 ---
-
-# The Difference Between Non-Agentic AI vs Agentic AI
 
 The hype of generative AI is gone; people now are more familiar with what a generative AI can do. But I think there is a lot more an AI (or specifically a LLM) can do, more than just "Write me an essay in 4000 words like a first year college student."
 

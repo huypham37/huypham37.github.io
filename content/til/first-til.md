@@ -2,6 +2,7 @@
 title: "Setting Up OpenMP on macOS"
 date: "2025-02-22T12:00:00Z"
 draft: false
+tags: ["openmp", "macos", "clang", "llvm", "cmake"]
 ---
 
 ## Problem Description

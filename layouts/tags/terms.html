@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>All Tags</title>
+    <link rel="stylesheet" href="/css/style.css">
+    {{ partial "head.html" . }}
+</head>
+<body>
+    {{ partial "header.html" . }}
+    <main>
+        <h1>All Tags</h1>
+        <ul class="tag-list">
+            {{ range .Data.Terms.Alphabetical }}
+            <li>
+                <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
+                <span class="count">({{ .Count }})</span>
+            </li>
+            {{ end }}
+        </ul>
+    </main>
+    {{ partial "footer.html" . }}
+</body>
+</html>

@@ -2,6 +2,7 @@
 title: "Computing π with OpenMP"
 date: "2025-02-23T12:00:00Z"
 draft: false
+tags: ["openmp", "parallel-computing", "cpp"]
 ---
 
 ## Overview

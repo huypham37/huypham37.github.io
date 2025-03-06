@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pair-Programming on Your Name - Website</title>
+    <link>http://localhost:1313/tags/pair-programming/</link>
+    <description>Recent content in Pair-Programming on Your Name - Website</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 23 Feb 2025 13:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/pair-programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What I&#39;ve Learned from Pair Programming with Copilot</title>
+      <link>http://localhost:1313/til/04-working-with-copilot/</link>
+      <pubDate>Sun, 23 Feb 2025 13:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/til/04-working-with-copilot/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Always generate a comprehensive test suite and integration test suite after writing the code (for each module and for modules working together).&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Copilot is not a magical tool; it can&amp;rsquo;t create wonders on its own. It&amp;rsquo;s best to ask it to assist with repetitive tasks or generate boilerplate code.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Don&amp;rsquo;t fall into the trap of relying solely on Copilot. Read the error messages from the terminal or test output. I used to spend two hours repeatedly passing terminal failed error messages to Copilot, asking it to fix them, but it couldn&amp;rsquo;t. The loop would continue until I read the error message and fixed it myself.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

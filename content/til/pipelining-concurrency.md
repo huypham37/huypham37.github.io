@@ -2,6 +2,7 @@
 title: "Pipelining vs Concurrency: Understanding the Difference"
 date: "2025-02-23T12:30:00Z"
 draft: false
+tags: ["pipelining", "concurrency", "hardware", "software"]
 ---
 
 Today I learned about the key differences between pipelining and concurrency:

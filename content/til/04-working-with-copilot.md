@@ -2,9 +2,9 @@
 title: "What I've Learned from Pair Programming with Copilot"
 date: "2025-02-23T13:00:00Z"
 draft: false
+tags: ["copilot", "pair-programming", "tips"]
 ---
 
-# What I've Learned from Pair Programming with Copilot
 
 - Always generate a comprehensive test suite and integration test suite after writing the code (for each module and for modules working together).
 

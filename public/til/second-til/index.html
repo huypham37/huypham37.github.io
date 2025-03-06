@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
     <title>std::cout is Not Thread-Safe: Using stringstream for Safe Multithreaded Output in C&#43;&#43;</title>
     <link rel="stylesheet" href="/css/style.css">
@@ -14,6 +15,7 @@
 </head>
 </html>
 </head>
+
 <body>
     <!DOCTYPE html>
 <html>
@@ -41,6 +43,19 @@
     <main>
         <article>
             <h1>std::cout is Not Thread-Safe: Using stringstream for Safe Multithreaded Output in C&#43;&#43;</h1>
+
+            
+            
+            <div class="tags">
+                <strong>Tags:</strong>
+                
+                <a href="/tags/cpp/">cpp</a>
+                
+                <a href="/tags/multithreading/">multithreading</a>
+                
+            </div>
+            
+
             <p>Today I learned that <code>std::cout</code> is not thread-safe by default. When multiple threads try to write to <code>std::cout</code> simultaneously, the output can become jumbled and garbled due to race conditions.</p>
 <h2 id="the-problem">The Problem</h2>
 <p>Consider this problematic code:</p>
@@ -97,4 +112,5 @@ Hello from thread 3
     </p>
 </footer>
 </body>
+
 </html>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ai on Your Name - Website</title>
+    <link>http://localhost:1313/tags/ai/</link>
+    <description>Recent content in Ai on Your Name - Website</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 24 Feb 2025 13:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Non-Agentic vs. Agentic AI: Beyond the Generative Hype</title>
+      <link>http://localhost:1313/til/05-agentic-ai/</link>
+      <pubDate>Mon, 24 Feb 2025 13:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/til/05-agentic-ai/</guid>
+      <description>&lt;p&gt;The hype of generative AI is gone; people now are more familiar with what a generative AI can do. But I think there is a lot more an AI (or specifically a LLM) can do, more than just &amp;ldquo;Write me an essay in 4000 words like a first year college student.&amp;rdquo;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Non-agentic AI:&lt;/strong&gt; This is basically a generative AI which you give it an input, give you an output, no recheck, no question, no feedback. It&amp;rsquo;s like a robot that you give it a command, it does it, and that&amp;rsquo;s it.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;img src=&#34;http://localhost:1313/img/non-agnetic-flow.png&#34; alt=&#34;Non-Agentic AI Workflow&#34; width=&#34;700&#34; height=&#34;400&#34;&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Agentic AI:&lt;/strong&gt; A generative AI with a set of tools. The newest application of agentic AI is deep research or deep search from multiple frontier AI companies like OpenAI, Deepseek or Google - AI which can talk to an API, send requests to websites, surf the web, re-check the value and produce a result. The typical agentic AI workflow would look like this:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;img src=&#34;http://localhost:1313/img/agentic-ai-flow.png&#34; alt=&#34;Agentic AI Workflow&#34; width=&#34;700&#34; height=&#34;400&#34;&gt;</description>
+    </item>
+  </channel>
+</rss>
