@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apple-Silicon on Your Name - Website</title>
+    <link>http://localhost:1313/tags/apple-silicon/</link>
+    <description>Recent content in Apple-Silicon on Your Name - Website</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 14 Mar 2025 10:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/apple-silicon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installing PyTorch with MPS Support on macOS (Apple Silicon)</title>
+      <link>http://localhost:1313/tutorials/01_installtorchmps/</link>
+      <pubDate>Fri, 14 Mar 2025 10:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tutorials/01_installtorchmps/</guid>
+      <description>&lt;p&gt;This tutorial guides you through installing PyTorch with Metal Performance Shaders (MPS) support on a Mac with Apple silicon (M1, M2, M3). MPS enables GPU acceleration natively on macOS, making it ideal for machine learning tasks. We&amp;rsquo;ll build PyTorch from source to ensure MPS compatibility, addressing common issues like missing OpenMP libraries (&lt;code&gt;libomp&lt;/code&gt;) by installing LLVM via Homebrew.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Hardware&lt;/strong&gt;: Mac with Apple silicon (M1, M2, M3, etc.).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;OS&lt;/strong&gt;: macOS 12.3 or later (check with &lt;code&gt;sw_vers&lt;/code&gt;).&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tools&lt;/strong&gt;:&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Xcode Command Line Tools (CLT).&lt;/li&gt;&#xA;&lt;li&gt;Homebrew (package manager).&lt;/li&gt;&#xA;&lt;li&gt;Python 3.8+ (preferably 3.10 or 3.11).&lt;/li&gt;&#xA;&lt;li&gt;Git.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;step-1-install-required-tools&#34;&gt;Step 1: Install Required Tools&lt;/h2&gt;&#xA;&lt;h3 id=&#34;11-install-xcode-command-line-tools&#34;&gt;1.1 Install Xcode Command Line Tools&lt;/h3&gt;&#xA;&lt;p&gt;Xcode CLT provides compilers and libraries needed for PyTorch.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

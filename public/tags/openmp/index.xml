@@ -6,8 +6,15 @@
     <description>Recent content in Openmp on Your Name - Website</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 22 Feb 2025 12:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 23 Feb 2025 12:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/openmp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Computing π with OpenMP</title>
+      <link>http://localhost:1313/til/third-til/</link>
+      <pubDate>Sun, 23 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/til/third-til/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Numerical Integration for π:&lt;/strong&gt;&lt;br&gt;&#xA;The function computes π by integrating the function &lt;code&gt;4/(1+x^2)&lt;/code&gt; over [0,1] using a Riemann sum with midpoints.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Timing with std::chrono:&lt;/strong&gt;&lt;br&gt;&#xA;The duration for the computation is measured using C++11&amp;rsquo;s &lt;code&gt;&amp;lt;chrono&amp;gt;&lt;/code&gt; utilities.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;using-openmp&#34;&gt;Using OpenMP&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Parallel Region:&lt;/strong&gt;&lt;br&gt;&#xA;The computation is performed inside an OpenMP parallel region where each thread calculates a partial sum.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Local Sum per Thread:&lt;/strong&gt;&lt;br&gt;&#xA;Each thread uses its own &lt;code&gt;local_sum&lt;/code&gt; variable to accumulate values from its portion of the loop. This prevents race conditions.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Setting Up OpenMP on macOS</title>
       <link>http://localhost:1313/til/first-til/</link>
