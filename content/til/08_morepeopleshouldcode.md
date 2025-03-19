@@ -1,28 +1,25 @@
 ---
-title: ""
+title: "More people should code"
 date: "2025-03-19T13:00:00Z"
 draft: false
-tags: ["tag1", "tag2", "tag3"]
+tags: ["AI", "writing", "coding"]
 ---
 
-# Your Post Title Here
 
-Your introductory paragraph goes here. Provide a brief overview of what the post is about.
 
-## Section 1: Introduction
-Explain the background or context of your topic. Why is it important? What are you going to cover?
+I came across this post this morning, and Andrew Ng’s thoughts about the future of AI resonated with my own thoughts about the future of coding.
 
-## Section 2: Main Content
-- **Point 1**: Describe your first point in detail.
-- **Point 2**: Describe your second point in detail.
-- **Point 3**: Describe your third point in detail.
+“As coding becomes easier, more people should code, not fewer!”
 
-## Section 3: Examples or Case Studies
-Provide examples or case studies to illustrate your points. This could include code snippets, diagrams, or real-world scenarios.
+- [Andrew Ng](https://www.deeplearning.ai/the-batch/issue-292/)
 
-## Section 4: Conclusion
-Summarize the key takeaways from your post. What should the reader remember? What actions should they take next?
+Let’s consider the launch of GPT-3.5 by OpenAI in 2020. Could we ask it to brainstorm 32 ideas that will make AI useful in the next five years? We couldn’t, and even now, we can’t.
 
-## Additional Resources
-- Link to related articles or resources.
-- Link to documentation or external references.
+In 2025, five years after GPT-3.5, we have more useful tools built from AI, such as DeepSearch and AI-Agent. These tools are the result of human hands and brains, not AI ideas.
+
+AI excels at repetitive tasks like searching, synthesizing information, and more searching. However, it lacks the ability to come up with new ideas that will potentially change the world. 
+
+
+
+
+
