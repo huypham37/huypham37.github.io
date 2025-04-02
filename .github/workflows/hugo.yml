@@ -22,15 +22,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: true # Add this if your Hugo theme is a submodule
+
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v2 # v2 is still common, ensure it works; consider v3 if issues persist
         with:
           hugo-version: 'latest'
+          # extended: true # Uncomment this if you need the extended Hugo version
+
       - name: Build with Hugo
-        run: hugo --minify
+        run: hugo --minify --baseURL "${{ steps.pages.outputs.base_url }}/" # Use base URL if deploying to subpath
+
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3 # <-- Updated to v3
         with:
           path: ./public
 
@@ -43,4 +50,4 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4 # <-- Updated to v4
