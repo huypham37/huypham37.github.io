@@ -28,7 +28,7 @@ jobs:
           submodules: true # Add this if your Hugo theme is a submodule
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2 # v2 is still common, ensure it works; consider v3 if issues persist
+        uses: peaceiris/actions-hugo@v3 # v2 is still common, ensure it works; consider v3 if issues persist
         with:
           hugo-version: 'latest'
           # extended: true # Uncomment this if you need the extended Hugo version
