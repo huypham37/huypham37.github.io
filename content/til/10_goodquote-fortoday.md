@@ -2,7 +2,7 @@
 title: ""
 date: "2025-02-25T13:00:00Z"
 draft: false
-tags: quote, ai, ai-in-code
+tags: ["quote", "AI", "ai-in-code"]
 ---
 I went through this nice quote that truly align with what I thought for a very long time. 
 

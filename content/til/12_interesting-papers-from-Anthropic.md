@@ -2,7 +2,8 @@
 title: "Interesting Anthropic Paper"
 date: "2025-02-25T13:00:00Z"
 draft: false
-tags: research-papers, ai, ai-in-code
+tags: ["research-papers", "AI", "ai-in-code"]
+
 ---
 I went through these two papers which I found truly interesting for anyone has affinity in the development of LLM. 
 
