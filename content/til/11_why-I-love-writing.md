@@ -1,6 +1,6 @@
 ---
 title: "Why I love writing"
-date: "2025-02-26T12:00:00Z"
+date: "2025-04-03T08:00:00Z"
 draft: false
 tags: ["writing", "ai", "ai-in-code", "ai-in-content"]
 ---

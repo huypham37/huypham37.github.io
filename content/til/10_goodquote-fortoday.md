@@ -1,6 +1,6 @@
 ---
-title: ""
-date: "2025-02-25T13:00:00Z"
+title: "good quote for today"
+date: "2025-04-03T13:00:00Z"
 draft: false
 tags: ["quote", "AI", "ai-in-code"]
 ---
@@ -17,4 +17,5 @@ If you want to strike out on your own, this is an amazing tool if you learn how 
 Well, more people should code now, because it is never a better time. 
 
 [More People Should Code](/til/08_morepeopleshouldcode/)
+
 [Why I Love Working with LLMs](/til/07-whyIloveLLM/)

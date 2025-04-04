@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ai-in-Content on Your Name - Website</title>
+    <link>http://localhost:1313/tags/ai-in-content/</link>
+    <description>Recent content in Ai-in-Content on Your Name - Website</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 26 Feb 2025 12:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ai-in-content/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why I love writing</title>
+      <link>http://localhost:1313/til/11_why-i-love-writing/</link>
+      <pubDate>Wed, 26 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/til/11_why-i-love-writing/</guid>
+      <description>&lt;p&gt;&amp;ldquo;AI will write 90% of the code for software engineers within the next three to six months and every line of code within the next year.&amp;quot;-Anthropic CEO Dario Amodei&lt;/p&gt;&#xA;&lt;p&gt;I would think the same with bullsh** internet contents in the three to six months.&lt;/p&gt;&#xA;&lt;p&gt;That is why I love writing.&lt;/p&gt;&#xA;&lt;p&gt;Even my writing sucks, grammars, vocabularies&amp;hellip;.&lt;/p&gt;&#xA;&lt;p&gt;But who cares, when I dies, this writing is actuall from me, with horrible grammar errors, with terrible vocabs that can bore anyone from the first word. But it is mine,&#xA;not from the freaking robot (AGI, huh?).&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

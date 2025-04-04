@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Quote on Your Name - Website</title>
+    <link>http://localhost:1313/tags/quote/</link>
+    <description>Recent content in Quote on Your Name - Website</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 25 Feb 2025 13:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/quote/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>good quote for today</title>
+      <link>http://localhost:1313/til/10_goodquote-fortoday/</link>
+      <pubDate>Tue, 25 Feb 2025 13:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/til/10_goodquote-fortoday/</guid>
+      <description>&lt;p&gt;I went through this nice quote that truly align with what I thought for a very long time.&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;If you&amp;rsquo;re a new programmer, my optimistic version is that there has never been a better time to learn to program, because it shaves down the learning curve so much. When you&amp;rsquo;re learning to program and you miss a semicolon and you bang your head against the computer for four hours [&amp;hellip;] if you&amp;rsquo;re unlucky you quit programming for good because it was so frustrating. [&amp;hellip;]&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Research-Papers on Your Name - Website</title>
+    <link>http://localhost:1313/tags/research-papers/</link>
+    <description>Recent content in Research-Papers on Your Name - Website</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 25 Feb 2025 13:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/research-papers/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Interesting Anthropic Paper</title>
+      <link>http://localhost:1313/til/12_interesting-papers-from-anthropic/</link>
+      <pubDate>Tue, 25 Feb 2025 13:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/til/12_interesting-papers-from-anthropic/</guid>
+      <description>&lt;p&gt;I went through these two papers which I found truly interesting for anyone has affinity in the development of LLM.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://transformer-circuits.pub/2025/attribution-graphs/methods.html&#34;&gt;Circuit Tracing: Revealing Computational Graphs in Language Models&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://transformer-circuits.pub/2025/attribution-graphs/biology.html&#34;&gt;On the Biology of a Large Language Model&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

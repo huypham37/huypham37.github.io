@@ -6,8 +6,15 @@
     <description>Recent content in Agentic-Ai on Your Name - Website</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 24 Feb 2025 13:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 25 Feb 2025 13:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/agentic-ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Everyone talks about Agentic AI</title>
+      <link>http://localhost:1313/til/09-agentic-ai/</link>
+      <pubDate>Tue, 25 Feb 2025 13:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/til/09-agentic-ai/</guid>
+      <description>&lt;p&gt;“Big data is like teenage sex: everyone talks about it, nobody really knows how to do it, everyone thinks everyone else is doing it, so everyone claims they are doing it.” - Dan Ariely&#xA;This is still true with current agentic ai discussion.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Non-Agentic vs. Agentic AI: Beyond the Generative Hype</title>
       <link>http://localhost:1313/til/05-agentic-ai/</link>

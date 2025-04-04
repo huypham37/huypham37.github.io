@@ -1,13 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ai on Your Name - Website</title>
+    <title>AI on Your Name - Website</title>
     <link>http://localhost:1313/tags/ai/</link>
-    <description>Recent content in Ai on Your Name - Website</description>
+    <description>Recent content in AI on Your Name - Website</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 24 Feb 2025 13:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 19 Mar 2025 13:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>More people should code</title>
+      <link>http://localhost:1313/til/08_morepeopleshouldcode/</link>
+      <pubDate>Wed, 19 Mar 2025 13:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/til/08_morepeopleshouldcode/</guid>
+      <description>&lt;p&gt;I came across this post this morning, and Andrew Ng’s thoughts about the future of AI resonated with my own thoughts about the future of coding.&lt;/p&gt;&#xA;&lt;p&gt;“As coding becomes easier, more people should code, not fewer!”&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.deeplearning.ai/the-batch/issue-292/&#34;&gt;Andrew Ng&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Let’s consider the launch of GPT-3.5 by OpenAI in 2020. Could we ask it to brainstorm 32 ideas that will make AI useful in the next five years? We couldn’t, and even now, we can’t.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why I Love Working with Large Language Models</title>
+      <link>http://localhost:1313/til/07-whyilovellm/</link>
+      <pubDate>Fri, 14 Mar 2025 13:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/til/07-whyilovellm/</guid>
+      <description>&lt;p&gt;Because they are stupid.&lt;/p&gt;&#xA;&lt;p&gt;Normal people workflows with LLMs are like this, and think they can learn from them:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I have a problem X&lt;/li&gt;&#xA;&lt;li&gt;I ask LLM to solve it&lt;/li&gt;&#xA;&lt;li&gt;LLM gives me a solution&lt;/li&gt;&#xA;&lt;li&gt;I take the solution and run it&lt;/li&gt;&#xA;&lt;li&gt;It works, I am happy&lt;/li&gt;&#xA;&lt;li&gt;Then I ask LLM to explain the solution -&amp;gt; I learned it.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;It&amp;rsquo;s fine, but in the best case.&lt;/p&gt;&#xA;&lt;p&gt;Then how I work with LLMs:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why I love writing</title>
+      <link>http://localhost:1313/til/11_why-i-love-writing/</link>
+      <pubDate>Wed, 26 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/til/11_why-i-love-writing/</guid>
+      <description>&lt;p&gt;&amp;ldquo;AI will write 90% of the code for software engineers within the next three to six months and every line of code within the next year.&amp;quot;-Anthropic CEO Dario Amodei&lt;/p&gt;&#xA;&lt;p&gt;I would think the same with bullsh** internet contents in the three to six months.&lt;/p&gt;&#xA;&lt;p&gt;That is why I love writing.&lt;/p&gt;&#xA;&lt;p&gt;Even my writing sucks, grammars, vocabularies&amp;hellip;.&lt;/p&gt;&#xA;&lt;p&gt;But who cares, when I dies, this writing is actuall from me, with horrible grammar errors, with terrible vocabs that can bore anyone from the first word. But it is mine,&#xA;not from the freaking robot (AGI, huh?).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>good quote for today</title>
+      <link>http://localhost:1313/til/10_goodquote-fortoday/</link>
+      <pubDate>Tue, 25 Feb 2025 13:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/til/10_goodquote-fortoday/</guid>
+      <description>&lt;p&gt;I went through this nice quote that truly align with what I thought for a very long time.&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;If you&amp;rsquo;re a new programmer, my optimistic version is that there has never been a better time to learn to program, because it shaves down the learning curve so much. When you&amp;rsquo;re learning to program and you miss a semicolon and you bang your head against the computer for four hours [&amp;hellip;] if you&amp;rsquo;re unlucky you quit programming for good because it was so frustrating. [&amp;hellip;]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Interesting Anthropic Paper</title>
+      <link>http://localhost:1313/til/12_interesting-papers-from-anthropic/</link>
+      <pubDate>Tue, 25 Feb 2025 13:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/til/12_interesting-papers-from-anthropic/</guid>
+      <description>&lt;p&gt;I went through these two papers which I found truly interesting for anyone has affinity in the development of LLM.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://transformer-circuits.pub/2025/attribution-graphs/methods.html&#34;&gt;Circuit Tracing: Revealing Computational Graphs in Language Models&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://transformer-circuits.pub/2025/attribution-graphs/biology.html&#34;&gt;On the Biology of a Large Language Model&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Non-Agentic vs. Agentic AI: Beyond the Generative Hype</title>
       <link>http://localhost:1313/til/05-agentic-ai/</link>

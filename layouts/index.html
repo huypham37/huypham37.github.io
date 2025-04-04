@@ -11,22 +11,27 @@
     {{ partial "header.html" . }}
     <main>
         <div class="sections-container">
-            <section id="about">
-                <h2>About Me</h2>
-                {{ .Content | safeHTML }}
-            </section>
-            <section id="mywork">
-                <h2>My Work</h2>
-                {{ .Content | safeHTML }}
-            </section>
             <section id="til">
                 <h2>Today I Learned (TIL)</h2>
-                <ul>
+                <div class="til-articles">
                     {{ $tilSection := .Site.GetPage "section" "til" }}
-                    {{ range $tilSection.Pages }}
-                    <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                    {{ range sort $tilSection.Pages "Date" "desc" }}
+                    <article class="til-article">
+                        <h3>{{ .Title }}</h3>
+                        <p><small>{{ .Date.Format "January 2, 2006" }}</small></p>
+                        <div class="til-tags">
+                            <strong>Tags:</strong>
+                            {{ range .Params.tags }}
+                            <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="tag">{{ . }}</a>
+                            {{ end }}
+                        </div>
+                        <div class="til-content">
+                            {{ .Content }}
+                        </div>
+                    </article>
+                    <hr>
                     {{ end }}
-                </ul>
+                </div>
             </section>
         </div>
     </main>
