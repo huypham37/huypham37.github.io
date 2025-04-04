@@ -6,9 +6,11 @@ draft: false
 
 {{< myimg src="/img/portrait.jpeg" alt="Your Portrait" width="300" height="400" >}}
 
-## I’m Steve. Deal with It.
+## I’m Steve. 
 
-I’m a Computer Science student at Maastricht University, where I write code that doesn’t suck and bend AI to my will for personal knowledge management (PKM) and productivity hacks. Before this, I wasted three years in precision mechanics—turns out, wrenches are just primitive debuggers.
+I’m a 2nd-year CS student at Maastricht University, where I write code that doesn’t suck and bend AI to my will for personal knowledge management (PKM) and productivity hacks. Before this, I wasted three years in precision mechanics—turns out, wrenches are just primitive debuggers. I can talk several hours about new, emerging trends in AI world, or new paper, techniques around machine learning. 
+
+Also I love writing about what I am thinking (mostly can be severely diverse in topic, sorry). Now my thinking is 100% stucked with AI and deeplearning, you might find most of my writing here related to that. 
 
 ### Stack Trace
 
