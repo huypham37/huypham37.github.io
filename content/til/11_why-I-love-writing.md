@@ -2,7 +2,7 @@
 title: "Why I love writing"
 date: "2025-02-26T12:00:00Z"
 draft: false
-tags: ["writing", "ai", "ai-in-code", "ai-in-content]
+tags: ["writing", "ai", "ai-in-code", "ai-in-content"]
 ---
 
 "AI will write 90% of the code for software engineers within the next three to six months and every line of code within the next year."-Anthropic CEO Dario Amodei 
