@@ -1,41 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+    <head>
+        <title>{{ .Site.Title }}</title>
+        <link rel="stylesheet" href="/css/style.css" />
+        {{ partial "head.html" . }}
+    </head>
 
-<head>
-    <title>{{ .Site.Title }}</title>
-    <link rel="stylesheet" href="/css/style.css">
-    {{ partial "head.html" . }}
-</head>
-
-<body>
-    {{ partial "header.html" . }}
-    <main>
-        <div class="sections-container">
-            <section id="til">
-                <h2>Today I Learned (TIL)</h2>
-                <div class="til-articles">
-                    {{ $tilSection := .Site.GetPage "section" "til" }}
-                    {{ range sort $tilSection.Pages "Date" "desc" }}
-                    <article class="til-article">
-                        <h3>{{ .Title }}</h3>
-                        <p><small>{{ .Date.Format "January 2, 2006" }}</small></p>
-                        <div class="til-tags">
-                            <strong>Tags:</strong>
-                            {{ range .Params.tags }}
-                            <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}" class="tag">{{ . }}</a>
-                            {{ end }}
-                        </div>
-                        <div class="til-content">
-                            {{ .Content }}
-                        </div>
-                    </article>
-                    <hr>
-                    {{ end }}
+    <body>
+        {{ partial "header.html" . }}
+        <main>
+            <!-- Welcome Window with Mascot -->
+            <div class="window welcome-window">
+                <div class="window-title">
+                    <h2>Welcome to my Digital Space</h2>
                 </div>
-            </section>
-        </div>
-    </main>
-    {{ partial "footer.html" . }}
-</body>
+                <div
+                    class="window-content"
+                    style="text-align: center; padding: 40px 20px"
+                >
+                    <!-- Mascot GIF -->
+                    <div class="mascot-container">
+                        <img
+                            src="/img/steve-mascot.gif"
+                            alt="Steve the Mascot"
+                            class="mascot"
+                        />
+                    </div>
 
+                    <div class="welcome-text">
+                        <p
+                            style="
+                                font-size: 16px;
+                                line-height: 1.8;
+                                max-width: 600px;
+                                margin: 20px auto;
+                            "
+                        >
+                            <strong>Welcome, my name is Steve.</strong><br />
+                            I like to talk about <strong>software</strong>,
+                            <strong>cybersecurity</strong>, and
+                            <strong>LLM</strong>.<br />
+                            To see my research, check out
+                            <a
+                                href="/mywork/"
+                                class="button"
+                                style="display: inline-block; margin-top: 10px"
+                                >My Work</a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GitHub Contributions -->
+            <div class="window">
+                <div
+                    class="window-content"
+                    style="padding: 20px; text-align: center"
+                >
+                    <img
+                        src="https://ghchart.rshah.org/000000/huypham37"
+                        alt="GitHub Contributions"
+                        style="
+                            width: 100%;
+                            max-width: 800px;
+                            margin: 0 auto;
+                            display: block;
+                            image-rendering: pixelated;
+                            border: 2px solid #000;
+                        "
+                    />
+                </div>
+            </div>
+        </main>
+        {{ partial "footer.html" . }}
+    </body>
 </html>

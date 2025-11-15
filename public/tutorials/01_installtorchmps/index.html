@@ -1,124 +1,311 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
+    <head>
+        <script
+            src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload"
+            data-no-instant
+            defer
+        ></script>
+        <title>
+            Installing PyTorch with MPS Support on macOS (Apple Silicon)
+        </title>
+        <link rel="stylesheet" href="/css/style.css" />
+        <!doctype html>
+        <html>
+            <head>
+                <meta charset="UTF-8" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1.0"
+                />
+                <link rel="stylesheet" href="/css/style.css" />
+                <title>Your Name - Website</title>
+                <meta name="description" content="" />
+            </head>
+        </html>
+    </head>
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <title>Installing PyTorch with MPS Support on macOS (Apple Silicon)</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Your Name - Website</title>
-    <meta name="description" content="">
-</head>
-</html>
-</head>
+    <body>
+        <!doctype html>
+        <html>
+            <head>
+                <title>Your Name - Website</title>
+                <link rel="stylesheet" href="/css/style.css" />
+                <meta
+                    name="viewport"
+                    content="width=device-width, initial-scale=1"
+                />
+            </head>
 
-<body>
-    <!DOCTYPE html>
-<html>
+            <body>
+                <header>
+                    <nav>
+                        <ul>
+                            <li><a href="/about/">About Me</a></li>
+                            <li><a href="/mywork/">My Work</a></li>
+                            <li><a href="/til/">TIL</a></li>
+                            <li><a href="/tutorials/">Tutorials</a></li>
+                            <li>
+                                <a
+                                    href="https://github.com/huypham37"
+                                    target="_blank"
+                                    >GitHub</a
+                                >
+                            </li>
+                            <li>
+                                <a
+                                    href="https://linkedin.com/in/huypham37"
+                                    target="_blank"
+                                    >LinkedIn</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+                <main>
+                    <article>
+                        <h1>
+                            Installing PyTorch with MPS Support on macOS (Apple
+                            Silicon)
+                        </h1>
 
-<head>
-    <title>Your Name - Website</title>
-    <link rel="stylesheet" href="/css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+                        <div class="tags">
+                            <strong>Tags:</strong>
 
-<body>
-    <header>
-        
-        
-        <nav>
-            <ul>
-                <li><a href="/about/">About Me</a></li>
-                <li><a href="/mywork/">My Work</a></li>
-                <li><a href="/til/">TIL</a></li>
-                <li><a href="/tutorials/">Tutorials</a></li>
-                <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
-                <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <article>
-            <h1>Installing PyTorch with MPS Support on macOS (Apple Silicon)</h1>
+                            <a href="/tags/pytorch/">pytorch</a>
 
-            
-            
-            <div class="tags">
-                <strong>Tags:</strong>
-                
-                <a href="/tags/pytorch/">pytorch</a>
-                
-                <a href="/tags/mps/">mps</a>
-                
-                <a href="/tags/apple-silicon/">apple-silicon</a>
-                
-                <a href="/tags/machine-learning/">machine-learning</a>
-                
-            </div>
-            
+                            <a href="/tags/mps/">mps</a>
 
-            <p>This tutorial guides you through installing PyTorch with Metal Performance Shaders (MPS) support on a Mac with Apple silicon (M1, M2, M3). MPS enables GPU acceleration natively on macOS, making it ideal for machine learning tasks. We&rsquo;ll build PyTorch from source to ensure MPS compatibility, addressing common issues like missing OpenMP libraries (<code>libomp</code>) by installing LLVM via Homebrew.</p>
-<h2 id="prerequisites">Prerequisites</h2>
-<ul>
-<li><strong>Hardware</strong>: Mac with Apple silicon (M1, M2, M3, etc.).</li>
-<li><strong>OS</strong>: macOS 12.3 or later (check with <code>sw_vers</code>).</li>
-<li><strong>Tools</strong>:
-<ul>
-<li>Xcode Command Line Tools (CLT).</li>
-<li>Homebrew (package manager).</li>
-<li>Python 3.8+ (preferably 3.10 or 3.11).</li>
-<li>Git.</li>
-</ul>
-</li>
-</ul>
-<h2 id="step-1-install-required-tools">Step 1: Install Required Tools</h2>
-<h3 id="11-install-xcode-command-line-tools">1.1 Install Xcode Command Line Tools</h3>
-<p>Xcode CLT provides compilers and libraries needed for PyTorch.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>xcode-select --install
-</span></span></code></pre></div><ul>
-<li>Verify installation: <code>xcode-select -p</code> should output <code>/Library/Developer/CommandLineTools</code>.</li>
-</ul>
-<h3 id="12-install-homebrew">1.2 Install Homebrew</h3>
-<p>Homebrew manages dependencies like LLVM.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/bin/bash -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
-</span></span></code></pre></div><ul>
-<li>Verify: <code>brew --version</code>.</li>
-</ul>
-<h3 id="13-install-python">1.3 Install Python</h3>
-<p>Use a version compatible with PyTorch.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install python@3.11
-</span></span></code></pre></div><ul>
-<li>Alternatively, use Miniconda: <code>brew install miniconda</code> and follow its setup.</li>
-</ul>
-<h3 id="14-install-git">1.4 Install Git</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install git
-</span></span></code></pre></div><h2 id="step-2-set-up-a-virtual-environment">Step 2: Set Up a Virtual Environment</h2>
-<p>Isolate your Python environment.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 -m venv venv
+                            <a href="/tags/apple-silicon/">apple-silicon</a>
+
+                            <a href="/tags/machine-learning/"
+                                >machine-learning</a
+                            >
+                        </div>
+
+                        <p>
+                            This tutorial guides you through installing PyTorch
+                            with Metal Performance Shaders (MPS) support on a
+                            Mac with Apple silicon (M1, M2, M3). MPS enables GPU
+                            acceleration natively on macOS, making it ideal for
+                            machine learning tasks. We&rsquo;ll build PyTorch
+                            from source to ensure MPS compatibility, addressing
+                            common issues like missing OpenMP libraries
+                            (<code>libomp</code>) by installing LLVM via
+                            Homebrew.
+                        </p>
+                        <h2 id="prerequisites">Prerequisites</h2>
+                        <ul>
+                            <li>
+                                <strong>Hardware</strong>: Mac with Apple
+                                silicon (M1, M2, M3, etc.).
+                            </li>
+                            <li>
+                                <strong>OS</strong>: macOS 12.3 or later (check
+                                with <code>sw_vers</code>).
+                            </li>
+                            <li>
+                                <strong>Tools</strong>:
+                                <ul>
+                                    <li>Xcode Command Line Tools (CLT).</li>
+                                    <li>Homebrew (package manager).</li>
+                                    <li>
+                                        Python 3.8+ (preferably 3.10 or 3.11).
+                                    </li>
+                                    <li>Git.</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h2 id="step-1-install-required-tools">
+                            Step 1: Install Required Tools
+                        </h2>
+                        <h3 id="11-install-xcode-command-line-tools">
+                            1.1 Install Xcode Command Line Tools
+                        </h3>
+                        <p>
+                            Xcode CLT provides compilers and libraries needed
+                            for PyTorch.
+                        </p>
+                        <div class="highlight">
+                            <pre
+                                tabindex="0"
+                                style="
+                                    color: #f8f8f2;
+                                    background-color: #272822;
+                                    -moz-tab-size: 4;
+                                    -o-tab-size: 4;
+                                    tab-size: 4;
+                                "
+                            ><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>xcode-select --install
+</span></span></code></pre>
+                        </div>
+                        <ul>
+                            <li>
+                                Verify installation:
+                                <code>xcode-select -p</code> should output
+                                <code>/Library/Developer/CommandLineTools</code
+                                >.
+                            </li>
+                        </ul>
+                        <h3 id="12-install-homebrew">1.2 Install Homebrew</h3>
+                        <p>Homebrew manages dependencies like LLVM.</p>
+                        <div class="highlight">
+                            <pre
+                                tabindex="0"
+                                style="
+                                    color: #f8f8f2;
+                                    background-color: #272822;
+                                    -moz-tab-size: 4;
+                                    -o-tab-size: 4;
+                                    tab-size: 4;
+                                "
+                            ><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/bin/bash -c <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre>
+                        </div>
+                        <ul>
+                            <li>Verify: <code>brew --version</code>.</li>
+                        </ul>
+                        <h3 id="13-install-python">1.3 Install Python</h3>
+                        <p>Use a version compatible with PyTorch.</p>
+                        <div class="highlight">
+                            <pre
+                                tabindex="0"
+                                style="
+                                    color: #f8f8f2;
+                                    background-color: #272822;
+                                    -moz-tab-size: 4;
+                                    -o-tab-size: 4;
+                                    tab-size: 4;
+                                "
+                            ><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install python@3.11
+</span></span></code></pre>
+                        </div>
+                        <ul>
+                            <li>
+                                Alternatively, use Miniconda:
+                                <code>brew install miniconda</code> and follow
+                                its setup.
+                            </li>
+                        </ul>
+                        <h3 id="14-install-git">1.4 Install Git</h3>
+                        <div class="highlight">
+                            <pre
+                                tabindex="0"
+                                style="
+                                    color: #f8f8f2;
+                                    background-color: #272822;
+                                    -moz-tab-size: 4;
+                                    -o-tab-size: 4;
+                                    tab-size: 4;
+                                "
+                            ><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install git
+</span></span></code></pre>
+                        </div>
+                        <h2 id="step-2-set-up-a-virtual-environment">
+                            Step 2: Set Up a Virtual Environment
+                        </h2>
+                        <p>Isolate your Python environment.</p>
+                        <div class="highlight">
+                            <pre
+                                tabindex="0"
+                                style="
+                                    color: #f8f8f2;
+                                    background-color: #272822;
+                                    -moz-tab-size: 4;
+                                    -o-tab-size: 4;
+                                    tab-size: 4;
+                                "
+                            ><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>python3 -m venv venv
 </span></span><span style="display:flex;"><span>source venv/bin/activate
-</span></span></code></pre></div><ul>
-<li>Verify: <code>which python</code> should point to <code>venv/bin/python</code>.</li>
-</ul>
-<h2 id="step-3-install-dependencies">Step 3: Install Dependencies</h2>
-<p>Install build tools and libraries.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install --upgrade pip
+</span></span></code></pre>
+                        </div>
+                        <ul>
+                            <li>
+                                Verify: <code>which python</code> should point
+                                to <code>venv/bin/python</code>.
+                            </li>
+                        </ul>
+                        <h2 id="step-3-install-dependencies">
+                            Step 3: Install Dependencies
+                        </h2>
+                        <p>Install build tools and libraries.</p>
+                        <div class="highlight">
+                            <pre
+                                tabindex="0"
+                                style="
+                                    color: #f8f8f2;
+                                    background-color: #272822;
+                                    -moz-tab-size: 4;
+                                    -o-tab-size: 4;
+                                    tab-size: 4;
+                                "
+                            ><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install --upgrade pip
 </span></span><span style="display:flex;"><span>pip install cmake ninja numpy pyyaml setuptools typing_extensions
 </span></span><span style="display:flex;"><span>brew install libpng libjpeg-turbo
-</span></span></code></pre></div><h2 id="step-4-install-llvm-for-openmp-support">Step 4: Install LLVM for OpenMP Support</h2>
-<p>PyTorch requires <code>libomp</code> for parallelism. Since Xcode CLT may lack it, install LLVM.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install llvm
-</span></span></code></pre></div><ul>
-<li>Verify: <code>ls /opt/homebrew/opt/llvm/lib/libomp*</code> should show <code>libomp.dylib</code>.</li>
-</ul>
-<h2 id="step-5-configure-your-shell-environment">Step 5: Configure Your Shell Environment</h2>
-<p>Edit your <code>~/.zshrc</code> (or equivalent) to use LLVM’s compilers and libraries.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano ~/.zshrc
-</span></span></code></pre></div><p>Add or update with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Conda initialization (if using Miniconda)</span>
+</span></span></code></pre>
+                        </div>
+                        <h2 id="step-4-install-llvm-for-openmp-support">
+                            Step 4: Install LLVM for OpenMP Support
+                        </h2>
+                        <p>
+                            PyTorch requires <code>libomp</code> for
+                            parallelism. Since Xcode CLT may lack it, install
+                            LLVM.
+                        </p>
+                        <div class="highlight">
+                            <pre
+                                tabindex="0"
+                                style="
+                                    color: #f8f8f2;
+                                    background-color: #272822;
+                                    -moz-tab-size: 4;
+                                    -o-tab-size: 4;
+                                    tab-size: 4;
+                                "
+                            ><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install llvm
+</span></span></code></pre>
+                        </div>
+                        <ul>
+                            <li>
+                                Verify:
+                                <code
+                                    >ls /opt/homebrew/opt/llvm/lib/libomp*</code
+                                >
+                                should show <code>libomp.dylib</code>.
+                            </li>
+                        </ul>
+                        <h2 id="step-5-configure-your-shell-environment">
+                            Step 5: Configure Your Shell Environment
+                        </h2>
+                        <p>
+                            Edit your <code>~/.zshrc</code> (or equivalent) to
+                            use LLVM’s compilers and libraries.
+                        </p>
+                        <div class="highlight">
+                            <pre
+                                tabindex="0"
+                                style="
+                                    color: #f8f8f2;
+                                    background-color: #272822;
+                                    -moz-tab-size: 4;
+                                    -o-tab-size: 4;
+                                    tab-size: 4;
+                                "
+                            ><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano ~/.zshrc
+</span></span></code></pre>
+                        </div>
+                        <p>Add or update with:</p>
+                        <div class="highlight">
+                            <pre
+                                tabindex="0"
+                                style="
+                                    color: #f8f8f2;
+                                    background-color: #272822;
+                                    -moz-tab-size: 4;
+                                    -o-tab-size: 4;
+                                    tab-size: 4;
+                                "
+                            ><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Conda initialization (if using Miniconda)</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># &gt;&gt;&gt; conda initialize &gt;&gt;&gt;</span>
 </span></span><span style="display:flex;"><span>__conda_setup<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span><span style="color:#e6db74">&#39;/Users/mac/miniconda3/bin/conda&#39;</span> <span style="color:#e6db74">&#39;shell.zsh&#39;</span> <span style="color:#e6db74">&#39;hook&#39;</span> 2&gt; /dev/null<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $? -eq <span style="color:#ae81ff">0</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
@@ -149,45 +336,136 @@
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Linker and preprocessor flags for LLVM</span>
 </span></span><span style="display:flex;"><span>export LDFLAGS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-L/opt/homebrew/opt/llvm/lib&#34;</span>
 </span></span><span style="display:flex;"><span>export CPPFLAGS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-I/opt/homebrew/opt/llvm/include&#34;</span>
-</span></span></code></pre></div><ul>
-<li>Save and reload: <code>source ~/.zshrc</code>.</li>
-<li>Verify: <code>clang --version</code> should show LLVM’s version.</li>
-</ul>
-<h2 id="step-6-clone-and-build-pytorch">Step 6: Clone and Build PyTorch</h2>
-<h3 id="61-clone-the-repository">6.1 Clone the Repository</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone --recursive https://github.com/pytorch/pytorch
+</span></span></code></pre>
+                        </div>
+                        <ul>
+                            <li>
+                                Save and reload: <code>source ~/.zshrc</code>.
+                            </li>
+                            <li>
+                                Verify: <code>clang --version</code> should show
+                                LLVM’s version.
+                            </li>
+                        </ul>
+                        <h2 id="step-6-clone-and-build-pytorch">
+                            Step 6: Clone and Build PyTorch
+                        </h2>
+                        <h3 id="61-clone-the-repository">
+                            6.1 Clone the Repository
+                        </h3>
+                        <div class="highlight">
+                            <pre
+                                tabindex="0"
+                                style="
+                                    color: #f8f8f2;
+                                    background-color: #272822;
+                                    -moz-tab-size: 4;
+                                    -o-tab-size: 4;
+                                    tab-size: 4;
+                                "
+                            ><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone --recursive https://github.com/pytorch/pytorch
 </span></span><span style="display:flex;"><span>cd pytorch
-</span></span></code></pre></div><ul>
-<li><code>--recursive</code> ensures submodules are included.</li>
-</ul>
-<h3 id="62-build-pytorch">6.2 Build PyTorch</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source venv/bin/activate
+</span></span></code></pre>
+                        </div>
+                        <ul>
+                            <li>
+                                <code>--recursive</code> ensures submodules are
+                                included.
+                            </li>
+                        </ul>
+                        <h3 id="62-build-pytorch">6.2 Build PyTorch</h3>
+                        <div class="highlight">
+                            <pre
+                                tabindex="0"
+                                style="
+                                    color: #f8f8f2;
+                                    background-color: #272822;
+                                    -moz-tab-size: 4;
+                                    -o-tab-size: 4;
+                                    tab-size: 4;
+                                "
+                            ><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source venv/bin/activate
 </span></span><span style="display:flex;"><span>export USE_MPS<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>  <span style="color:#75715e"># Enable MPS support</span>
 </span></span><span style="display:flex;"><span>rm -rf build/     <span style="color:#75715e"># Clean any stale build</span>
 </span></span><span style="display:flex;"><span>python setup.py develop
-</span></span></code></pre></div><ul>
-<li>This builds and installs PyTorch in editable mode. Expect 20-60 minutes depending on your Mac.</li>
-</ul>
-<h2 id="step-7-verify-the-installation">Step 7: Verify the Installation</h2>
-<h3 id="71-check-version-and-mps-support">7.1 Check Version and MPS Support</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
+</span></span></code></pre>
+                        </div>
+                        <ul>
+                            <li>
+                                This builds and installs PyTorch in editable
+                                mode. Expect 20-60 minutes depending on your
+                                Mac.
+                            </li>
+                        </ul>
+                        <h2 id="step-7-verify-the-installation">
+                            Step 7: Verify the Installation
+                        </h2>
+                        <h3 id="71-check-version-and-mps-support">
+                            7.1 Check Version and MPS Support
+                        </h3>
+                        <div class="highlight">
+                            <pre
+                                tabindex="0"
+                                style="
+                                    color: #f8f8f2;
+                                    background-color: #272822;
+                                    -moz-tab-size: 4;
+                                    -o-tab-size: 4;
+                                    tab-size: 4;
+                                "
+                            ><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> torch
 </span></span><span style="display:flex;"><span>print(torch<span style="color:#f92672">.</span>__version__)          <span style="color:#75715e"># e.g., 2.8.0a0+gitbe4e6c1</span>
 </span></span><span style="display:flex;"><span>print(torch<span style="color:#f92672">.</span>backends<span style="color:#f92672">.</span>mps<span style="color:#f92672">.</span>is_available())  <span style="color:#75715e"># True</span>
 </span></span><span style="display:flex;"><span>print(torch<span style="color:#f92672">.</span>backends<span style="color:#f92672">.</span>mps<span style="color:#f92672">.</span>is_built())      <span style="color:#75715e"># True</span>
-</span></span></code></pre></div><ul>
-<li><code>is_available()</code> requires macOS 12.3+ and ARM64. <code>is_built()</code> confirms MPS was compiled.</li>
-</ul>
-<h3 id="72-test-tensor-operations-on-mps">7.2 Test Tensor Operations on MPS</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>)<span style="color:#f92672">.</span>to(<span style="color:#e6db74">&#34;mps&#34;</span>)
+</span></span></code></pre>
+                        </div>
+                        <ul>
+                            <li>
+                                <code>is_available()</code> requires macOS 12.3+
+                                and ARM64. <code>is_built()</code> confirms MPS
+                                was compiled.
+                            </li>
+                        </ul>
+                        <h3 id="72-test-tensor-operations-on-mps">
+                            7.2 Test Tensor Operations on MPS
+                        </h3>
+                        <div class="highlight">
+                            <pre
+                                tabindex="0"
+                                style="
+                                    color: #f8f8f2;
+                                    background-color: #272822;
+                                    -moz-tab-size: 4;
+                                    -o-tab-size: 4;
+                                    tab-size: 4;
+                                "
+                            ><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">3</span>, <span style="color:#ae81ff">3</span>)<span style="color:#f92672">.</span>to(<span style="color:#e6db74">&#34;mps&#34;</span>)
 </span></span><span style="display:flex;"><span>print(x)
 </span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> <span style="color:#ae81ff">2</span>
 </span></span><span style="display:flex;"><span>print(y)
-</span></span></code></pre></div><ul>
-<li>Expected: Tensors on <code>mps:0</code> with correct computation.</li>
-</ul>
-<h3 id="73-test-with-a-model-optional">7.3 Test with a Model (Optional)</h3>
-<p>For use with <strong>optimum-quanto</strong>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> transformers <span style="color:#f92672">import</span> AutoModelForCausalLM, AutoTokenizer
+</span></span></code></pre>
+                        </div>
+                        <ul>
+                            <li>
+                                Expected: Tensors on <code>mps:0</code> with
+                                correct computation.
+                            </li>
+                        </ul>
+                        <h3 id="73-test-with-a-model-optional">
+                            7.3 Test with a Model (Optional)
+                        </h3>
+                        <p>For use with <strong>optimum-quanto</strong>:</p>
+                        <div class="highlight">
+                            <pre
+                                tabindex="0"
+                                style="
+                                    color: #f8f8f2;
+                                    background-color: #272822;
+                                    -moz-tab-size: 4;
+                                    -o-tab-size: 4;
+                                    tab-size: 4;
+                                "
+                            ><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> transformers <span style="color:#f92672">import</span> AutoModelForCausalLM, AutoTokenizer
 </span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> optimum.quanto <span style="color:#f92672">import</span> quantize, qint8
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>model_id <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;facebook/opt-125m&#34;</span>
@@ -198,48 +476,120 @@
 </span></span><span style="display:flex;"><span>inputs <span style="color:#f92672">=</span> tokenizer(<span style="color:#e6db74">&#34;Hello from MPS!&#34;</span>, return_tensors<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pt&#34;</span>)<span style="color:#f92672">.</span>to(<span style="color:#e6db74">&#34;mps&#34;</span>)
 </span></span><span style="display:flex;"><span>outputs <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>generate(<span style="color:#f92672">**</span>inputs)
 </span></span><span style="display:flex;"><span>print(tokenizer<span style="color:#f92672">.</span>decode(outputs[<span style="color:#ae81ff">0</span>], skip_special_tokens<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>))
-</span></span></code></pre></div><ul>
-<li>Expected: Generates text (e.g., continuation of the input).</li>
-</ul>
-<h3 id="74-check-openmp-support">7.4 Check OpenMP Support</h3>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">10000</span>)
+</span></span></code></pre>
+                        </div>
+                        <ul>
+                            <li>
+                                Expected: Generates text (e.g., continuation of
+                                the input).
+                            </li>
+                        </ul>
+                        <h3 id="74-check-openmp-support">
+                            7.4 Check OpenMP Support
+                        </h3>
+                        <div class="highlight">
+                            <pre
+                                tabindex="0"
+                                style="
+                                    color: #f8f8f2;
+                                    background-color: #272822;
+                                    -moz-tab-size: 4;
+                                    -o-tab-size: 4;
+                                    tab-size: 4;
+                                "
+                            ><code class="language-python" data-lang="python"><span style="display:flex;"><span>x <span style="color:#f92672">=</span> torch<span style="color:#f92672">.</span>randn(<span style="color:#ae81ff">10000</span>, <span style="color:#ae81ff">10000</span>)
 </span></span><span style="display:flex;"><span>y <span style="color:#f92672">=</span> x <span style="color:#f92672">@</span> x
 </span></span><span style="display:flex;"><span>print(y<span style="color:#f92672">.</span>shape)  <span style="color:#75715e"># (10000, 10000)</span>
-</span></span></code></pre></div><ul>
-<li>Should run without OpenMP errors, using multiple CPU cores.</li>
-</ul>
-<h2 id="troubleshooting">Troubleshooting</h2>
-<ul>
-<li><strong>PyTorch Not Found</strong>: Ensure <code>venv</code> is active and rebuild if needed.</li>
-<li><strong>MPS Not Available</strong>: Verify macOS (12.3+) and ARM64 (<code>uname -m</code>). Set <code>export PYTORCH_ENABLE_MPS_FALLBACK=1</code> for CPU fallback.</li>
-<li><strong>Linking Errors (e.g., &lsquo;omp&rsquo; not found)</strong>: Ensure LLVM is installed and <code>LDFLAGS</code>/<code>CPPFLAGS</code> are set. Reinstall Xcode CLT if needed: <code>xcode-select --install</code>.</li>
-<li><strong>Build Fails</strong>: Clean with <code>rm -rf build/</code> and retry. Check logs for specific errors.</li>
-</ul>
-<h2 id="additional-notes">Additional Notes</h2>
-<ul>
-<li><strong>Why Build from Source?</strong>: Ensures the latest MPS fixes and customization (e.g., <code>main</code> branch). Nightly wheels (<code>pip install --pre torch -f https://download.pytorch.org/whl/nightly/cpu</code>) are an alternative but less flexible.</li>
-<li><strong>Disk Space</strong>: Building requires ~10-20GB free.</li>
-<li><strong>Performance</strong>: MPS accelerates inference; quantization with <strong>optimum-quanto</strong> further optimizes memory usage.</li>
-</ul>
-<h2 id="acknowledgments">Acknowledgments</h2>
-<p>This tutorial was crafted with assistance from Grok 3 (xAI), based on real-time troubleshooting on March 14, 2025.</p>
-<p>Happy coding with PyTorch on your Mac!</p>
-<pre tabindex="0"><code>
+</span></span></code></pre>
+                        </div>
+                        <ul>
+                            <li>
+                                Should run without OpenMP errors, using multiple
+                                CPU cores.
+                            </li>
+                        </ul>
+                        <h2 id="troubleshooting">Troubleshooting</h2>
+                        <ul>
+                            <li>
+                                <strong>PyTorch Not Found</strong>: Ensure
+                                <code>venv</code> is active and rebuild if
+                                needed.
+                            </li>
+                            <li>
+                                <strong>MPS Not Available</strong>: Verify macOS
+                                (12.3+) and ARM64 (<code>uname -m</code>). Set
+                                <code
+                                    >export PYTORCH_ENABLE_MPS_FALLBACK=1</code
+                                >
+                                for CPU fallback.
+                            </li>
+                            <li>
+                                <strong
+                                    >Linking Errors (e.g., &lsquo;omp&rsquo; not
+                                    found)</strong
+                                >: Ensure LLVM is installed and
+                                <code>LDFLAGS</code>/<code>CPPFLAGS</code> are
+                                set. Reinstall Xcode CLT if needed:
+                                <code>xcode-select --install</code>.
+                            </li>
+                            <li>
+                                <strong>Build Fails</strong>: Clean with
+                                <code>rm -rf build/</code> and retry. Check logs
+                                for specific errors.
+                            </li>
+                        </ul>
+                        <h2 id="additional-notes">Additional Notes</h2>
+                        <ul>
+                            <li>
+                                <strong>Why Build from Source?</strong>: Ensures
+                                the latest MPS fixes and customization (e.g.,
+                                <code>main</code> branch). Nightly wheels (<code
+                                    >pip install --pre torch -f
+                                    https://download.pytorch.org/whl/nightly/cpu</code
+                                >) are an alternative but less flexible.
+                            </li>
+                            <li>
+                                <strong>Disk Space</strong>: Building requires
+                                ~10-20GB free.
+                            </li>
+                            <li>
+                                <strong>Performance</strong>: MPS accelerates
+                                inference; quantization with
+                                <strong>optimum-quanto</strong> further
+                                optimizes memory usage.
+                            </li>
+                        </ul>
+                        <h2 id="acknowledgments">Acknowledgments</h2>
+                        <p>
+                            This tutorial was crafted with assistance from Grok
+                            3 (xAI), based on real-time troubleshooting on March
+                            14, 2025.
+                        </p>
+                        <p>Happy coding with PyTorch on your Mac!</p>
+                        <pre tabindex="0"><code>
 ### Notes on the Tutorial
 - **Structure**: Follows a logical flow from setup to verification, with troubleshooting for common issues.
 - **Customization**: Reflects your journey (e.g., LLVM for `libomp`, `.zshrc` tweaks).
 - **MPS Focus**: Emphasizes Apple silicon compatibility.
 - **optimum-quanto**: Included a test case since it’s your use case.
 </code></pre>
-        </article>
-    </main>
-    <footer>
-    <p>&copy; 2025 Huy Pham. All rights reserved.</p>
-    <p>
-        <a href="https://github.com/yourusername" target="_blank">GitHub</a> | 
-        <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
-    </p>
-</footer>
-</body>
-
+                    </article>
+                </main>
+                <footer>
+                    <p>&copy; 2025 Huy Pham. All rights reserved.</p>
+                    <p>
+                        <a href="https://github.com/huypham37" target="_blank"
+                            >GitHub</a
+                        >
+                        |
+                        <a
+                            href="https://linkedin.com/in/huypham37"
+                            target="_blank"
+                            >LinkedIn</a
+                        >
+                    </p>
+                </footer>
+            </body>
+        </html>
+    </body>
 </html>
