@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title>std::cout is Not Thread-Safe: Using stringstream for Safe Multithreaded Output in C&#43;&#43;</title>
+        <title>std::cout is Not Thread-Safe: Using stringstream for Safe Multithreaded Output in C&#43;&#43; - Blog</title>
         <link rel="stylesheet" href="/css/style.css" />
         <!DOCTYPE html>
 <html>
@@ -54,25 +54,29 @@
         <main>
             <div class="window">
                 <div class="window-title">
-                    <h2>📄 std::cout is Not Thread-Safe: Using stringstream for Safe Multithreaded Output in C&#43;&#43;</h2>
+                    <h2>std::cout is Not Thread-Safe: Using stringstream for Safe Multithreaded Output in C&#43;&#43;</h2>
                 </div>
                 <div class="window-content">
                     <article>
-                        
+                        <p>
+                            <small>February 23, 2025</small>
+                        </p>
                         <div class="til-tags">
                             <strong>Tags:</strong>
                             
-                            <a href="/tags/cpp/" class="tag"
+                            <a
+                                href="https://huypham37.github.io/tags/cpp"
+                                class="tag"
                                 >cpp</a
                             >
                             
-                            <a href="/tags/multithreading/" class="tag"
+                            <a
+                                href="https://huypham37.github.io/tags/multithreading"
+                                class="tag"
                                 >multithreading</a
                             >
                             
                         </div>
-                        
-
                         <div class="til-content"><p>Today I learned that <code>std::cout</code> is not thread-safe by default. When multiple threads try to write to <code>std::cout</code> simultaneously, the output can become jumbled and garbled due to race conditions.</p>
 <h2 id="the-problem">The Problem</h2>
 <p>Consider this problematic code:</p>

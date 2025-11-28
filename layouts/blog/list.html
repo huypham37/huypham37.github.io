@@ -17,7 +17,7 @@
                     <div class="til-articles">
                         {{ range sort .Pages "Date" "desc" }}
                         <article class="til-article">
-                            <h3>{{ .Title }}</h3>
+                            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
                             <p>
                                 <small
                                     >{{ .Date.Format "January 2, 2006" }}</small
@@ -33,7 +33,12 @@
                                 >
                                 {{ end }}
                             </div>
-                            <div class="til-content">{{ .Content }}</div>
+                            <div class="til-content">
+                                {{ .Summary }}
+                                <p>
+                                    <a href="{{ .Permalink }}">Read more →</a>
+                                </p>
+                            </div>
                         </article>
                         {{ end }}
                     </div>
