@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Your Name - Website</title>
+    <link>https://huypham37.github.io/blog/</link>
+    <description>Recent content on Your Name - Website</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 28 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://huypham37.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Rise of Generative Software: Why AI Won&#39;t Replace Software Engineers</title>
+      <link>https://huypham37.github.io/blog/13_rise-of-generative-software/</link>
+      <pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://huypham37.github.io/blog/13_rise-of-generative-software/</guid>
+      <description>&lt;h2 id=&#34;a-perspective-on-the-evolving-landscape-of-software-development&#34;&gt;A perspective on the evolving landscape of software development&lt;/h2&gt;&#xA;&lt;h3 id=&#34;the-question-everyones-asking&#34;&gt;The Question Everyone&amp;rsquo;s Asking&lt;/h3&gt;&#xA;&lt;p&gt;A few years ago, a colleague asked me: &amp;ldquo;What does the future look like if you&amp;rsquo;re a software engineer?&amp;rdquo; My answer then remains my answer now: AI will not replace software engineers, but it will fundamentally change what we do.&lt;/p&gt;&#xA;&lt;p&gt;We&amp;rsquo;re entering an era of more adaptive, personal software than we&amp;rsquo;ve ever seen before. Today&amp;rsquo;s coding agents can generate entire applications from a single prompt. But here&amp;rsquo;s what most people miss: the hardest problems in software engineering were never about writing the code itself.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>good quote for today</title>
+      <link>https://huypham37.github.io/blog/10_goodquote-fortoday/</link>
+      <pubDate>Thu, 03 Apr 2025 13:00:00 +0000</pubDate>
+      <guid>https://huypham37.github.io/blog/10_goodquote-fortoday/</guid>
+      <description>&lt;p&gt;I went through this nice quote that truly align with what I thought for a very long time.&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;If you&amp;rsquo;re a new programmer, my optimistic version is that there has never been a better time to learn to program, because it shaves down the learning curve so much. When you&amp;rsquo;re learning to program and you miss a semicolon and you bang your head against the computer for four hours [&amp;hellip;] if you&amp;rsquo;re unlucky you quit programming for good because it was so frustrating. [&amp;hellip;]&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Interesting Anthropic Paper</title>
+      <link>https://huypham37.github.io/blog/12_interesting-papers-from-anthropic/</link>
+      <pubDate>Thu, 03 Apr 2025 08:00:00 +0000</pubDate>
+      <guid>https://huypham37.github.io/blog/12_interesting-papers-from-anthropic/</guid>
+      <description>&lt;p&gt;I went through these two papers which I found truly interesting for anyone has affinity in the development of LLM.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://transformer-circuits.pub/2025/attribution-graphs/methods.html&#34;&gt;Circuit Tracing: Revealing Computational Graphs in Language Models&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://transformer-circuits.pub/2025/attribution-graphs/biology.html&#34;&gt;On the Biology of a Large Language Model&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why I love writing</title>
+      <link>https://huypham37.github.io/blog/11_why-i-love-writing/</link>
+      <pubDate>Thu, 03 Apr 2025 08:00:00 +0000</pubDate>
+      <guid>https://huypham37.github.io/blog/11_why-i-love-writing/</guid>
+      <description>&lt;p&gt;&amp;ldquo;AI will write 90% of the code for software engineers within the next three to six months and every line of code within the next year.&amp;quot;-Anthropic CEO Dario Amodei&lt;/p&gt;&#xA;&lt;p&gt;I would think the same with bullsh** internet contents in the three to six months.&lt;/p&gt;&#xA;&lt;p&gt;That is why I love writing.&lt;/p&gt;&#xA;&lt;p&gt;Even my writing sucks, grammars, vocabularies&amp;hellip;.&lt;/p&gt;&#xA;&lt;p&gt;But who cares, when I dies, this writing is actuall from me, with horrible grammar errors, with terrible vocabs that can bore anyone from the first word. But it is mine,&#xA;not from the freaking robot (AGI, huh?).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>More people should code</title>
+      <link>https://huypham37.github.io/blog/08_morepeopleshouldcode/</link>
+      <pubDate>Wed, 19 Mar 2025 13:00:00 +0000</pubDate>
+      <guid>https://huypham37.github.io/blog/08_morepeopleshouldcode/</guid>
+      <description>&lt;p&gt;I came across this post this morning, and Andrew Ng’s thoughts about the future of AI resonated with my own thoughts about the future of coding.&lt;/p&gt;&#xA;&lt;p&gt;“As coding becomes easier, more people should code, not fewer!”&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.deeplearning.ai/the-batch/issue-292/&#34;&gt;Andrew Ng&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Let’s consider the launch of GPT-3.5 by OpenAI in 2020. Could we ask it to brainstorm 32 ideas that will make AI useful in the next five years? We couldn’t, and even now, we can’t.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why I Love Working with Large Language Models</title>
+      <link>https://huypham37.github.io/blog/07-whyilovellm/</link>
+      <pubDate>Fri, 14 Mar 2025 13:00:00 +0000</pubDate>
+      <guid>https://huypham37.github.io/blog/07-whyilovellm/</guid>
+      <description>&lt;p&gt;Because they are stupid.&lt;/p&gt;&#xA;&lt;p&gt;Normal people workflows with LLMs are like this, and think they can learn from them:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I have a problem X&lt;/li&gt;&#xA;&lt;li&gt;I ask LLM to solve it&lt;/li&gt;&#xA;&lt;li&gt;LLM gives me a solution&lt;/li&gt;&#xA;&lt;li&gt;I take the solution and run it&lt;/li&gt;&#xA;&lt;li&gt;It works, I am happy&lt;/li&gt;&#xA;&lt;li&gt;Then I ask LLM to explain the solution -&amp;gt; I learned it.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;It&amp;rsquo;s fine, but in the best case.&lt;/p&gt;&#xA;&lt;p&gt;Then how I work with LLMs:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Everyone talks about Agentic AI</title>
+      <link>https://huypham37.github.io/blog/09-agentic-ai/</link>
+      <pubDate>Tue, 25 Feb 2025 13:00:00 +0000</pubDate>
+      <guid>https://huypham37.github.io/blog/09-agentic-ai/</guid>
+      <description>&lt;p&gt;“Big data is like teenage sex: everyone talks about it, nobody really knows how to do it, everyone thinks everyone else is doing it, so everyone claims they are doing it.” - Dan Ariely&#xA;This is still true with current agentic ai discussion.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Non-Agentic vs. Agentic AI: Beyond the Generative Hype</title>
+      <link>https://huypham37.github.io/blog/05-agentic-ai/</link>
+      <pubDate>Mon, 24 Feb 2025 13:00:00 +0000</pubDate>
+      <guid>https://huypham37.github.io/blog/05-agentic-ai/</guid>
+      <description>&lt;p&gt;The hype of generative AI is gone; people now are more familiar with what a generative AI can do. But I think there is a lot more an AI (or specifically a LLM) can do, more than just &amp;ldquo;Write me an essay in 4000 words like a first year college student.&amp;rdquo;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Non-agentic AI:&lt;/strong&gt; This is basically a generative AI which you give it an input, give you an output, no recheck, no question, no feedback. It&amp;rsquo;s like a robot that you give it a command, it does it, and that&amp;rsquo;s it.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;img src=&#34;https://huypham37.github.io/img/non-agnetic-flow.png&#34; alt=&#34;Non-Agentic AI Workflow&#34; width=&#34;700&#34; height=&#34;400&#34;&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Agentic AI:&lt;/strong&gt; A generative AI with a set of tools. The newest application of agentic AI is deep research or deep search from multiple frontier AI companies like OpenAI, Deepseek or Google - AI which can talk to an API, send requests to websites, surf the web, re-check the value and produce a result. The typical agentic AI workflow would look like this:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;img src=&#34;https://huypham37.github.io/img/agentic-ai-flow.png&#34; alt=&#34;Agentic AI Workflow&#34; width=&#34;700&#34; height=&#34;400&#34;&gt;</description>
+    </item>
+    <item>
+      <title>What I&#39;ve Learned from Pair Programming with Copilot</title>
+      <link>https://huypham37.github.io/blog/04-working-with-copilot/</link>
+      <pubDate>Sun, 23 Feb 2025 13:00:00 +0000</pubDate>
+      <guid>https://huypham37.github.io/blog/04-working-with-copilot/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Always generate a comprehensive test suite and integration test suite after writing the code (for each module and for modules working together).&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Copilot is not a magical tool; it can&amp;rsquo;t create wonders on its own. It&amp;rsquo;s best to ask it to assist with repetitive tasks or generate boilerplate code.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Don&amp;rsquo;t fall into the trap of relying solely on Copilot. Read the error messages from the terminal or test output. I used to spend two hours repeatedly passing terminal failed error messages to Copilot, asking it to fix them, but it couldn&amp;rsquo;t. The loop would continue until I read the error message and fixed it myself.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Computing π with OpenMP</title>
+      <link>https://huypham37.github.io/blog/third-til/</link>
+      <pubDate>Sun, 23 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>https://huypham37.github.io/blog/third-til/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Numerical Integration for π:&lt;/strong&gt;&lt;br&gt;&#xA;The function computes π by integrating the function &lt;code&gt;4/(1+x^2)&lt;/code&gt; over [0,1] using a Riemann sum with midpoints.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Timing with std::chrono:&lt;/strong&gt;&lt;br&gt;&#xA;The duration for the computation is measured using C++11&amp;rsquo;s &lt;code&gt;&amp;lt;chrono&amp;gt;&lt;/code&gt; utilities.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;using-openmp&#34;&gt;Using OpenMP&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Parallel Region:&lt;/strong&gt;&lt;br&gt;&#xA;The computation is performed inside an OpenMP parallel region where each thread calculates a partial sum.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;&lt;strong&gt;Local Sum per Thread:&lt;/strong&gt;&lt;br&gt;&#xA;Each thread uses its own &lt;code&gt;local_sum&lt;/code&gt; variable to accumulate values from its portion of the loop. This prevents race conditions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>std::cout is Not Thread-Safe: Using stringstream for Safe Multithreaded Output in C&#43;&#43;</title>
+      <link>https://huypham37.github.io/blog/second-til/</link>
+      <pubDate>Sun, 23 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>https://huypham37.github.io/blog/second-til/</guid>
+      <description>&lt;p&gt;Today I learned that &lt;code&gt;std::cout&lt;/code&gt; is not thread-safe by default. When multiple threads try to write to &lt;code&gt;std::cout&lt;/code&gt; simultaneously, the output can become jumbled and garbled due to race conditions.&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-problem&#34;&gt;The Problem&lt;/h2&gt;&#xA;&lt;p&gt;Consider this problematic code:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-cpp&#34; data-lang=&#34;cpp&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#pragma omp parallel&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;&lt;/span&gt;{&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; thread_id &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; omp_get_num_threads();&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;cout &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Hello from thread &amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; thread_id &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This can produce jumbled output like:&lt;/p&gt;&#xA;&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Hello Hello from thread from thread 12&#xA;Hello from thread 3&#xA;&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;the-solution-using-stringstream&#34;&gt;The Solution: Using stringstream&lt;/h2&gt;&#xA;&lt;p&gt;A better approach is to use &lt;code&gt;std::stringstream&lt;/code&gt; to build the complete string in thread-local storage before writing to &lt;code&gt;std::cout&lt;/code&gt;:&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Setting Up OpenMP on macOS</title>
+      <link>https://huypham37.github.io/blog/first-til/</link>
+      <pubDate>Sat, 22 Feb 2025 12:00:00 +0000</pubDate>
+      <guid>https://huypham37.github.io/blog/first-til/</guid>
+      <description>&lt;h2 id=&#34;problem-description&#34;&gt;Problem Description&lt;/h2&gt;&#xA;&lt;p&gt;When trying to compile OpenMP code on macOS, you might encounter this error:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fatal error: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;omp.h&amp;#39;&lt;/span&gt; file not found&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#include &amp;lt;omp.h&amp;gt;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;         ^~~~~~~&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; error generated.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This occurs because Apple&amp;rsquo;s default Clang compiler doesn&amp;rsquo;t include OpenMP support out of the box.&lt;/p&gt;&#xA;&lt;h2 id=&#34;solution&#34;&gt;Solution&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-install-llvm-using-homebrew&#34;&gt;1. Install LLVM using Homebrew&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;brew install llvm&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-set-up-environment-variables&#34;&gt;2. Set up Environment Variables&lt;/h3&gt;&#xA;&lt;p&gt;Add these lines to your &lt;code&gt;~/.zshrc&lt;/code&gt; (or &lt;code&gt;~/.bash_profile&lt;/code&gt;):&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# LLVM/OpenMP configuration&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export PATH&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;/opt/homebrew/opt/llvm/bin:&lt;/span&gt;$PATH&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export CC&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/opt/homebrew/opt/llvm/bin/clang&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export CXX&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/opt/homebrew/opt/llvm/bin/clang++&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export LDFLAGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-L/opt/homebrew/opt/llvm/lib&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;export CPPFLAGS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-I/opt/homebrew/opt/llvm/include&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then reload your shell configuration:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

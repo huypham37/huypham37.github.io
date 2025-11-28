@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Software-Engineering on Your Name - Website</title>
+    <link>https://huypham37.github.io/tags/software-engineering/</link>
+    <description>Recent content in Software-Engineering on Your Name - Website</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 28 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://huypham37.github.io/tags/software-engineering/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Rise of Generative Software: Why AI Won&#39;t Replace Software Engineers</title>
+      <link>https://huypham37.github.io/blog/13_rise-of-generative-software/</link>
+      <pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://huypham37.github.io/blog/13_rise-of-generative-software/</guid>
+      <description>&lt;h2 id=&#34;a-perspective-on-the-evolving-landscape-of-software-development&#34;&gt;A perspective on the evolving landscape of software development&lt;/h2&gt;&#xA;&lt;h3 id=&#34;the-question-everyones-asking&#34;&gt;The Question Everyone&amp;rsquo;s Asking&lt;/h3&gt;&#xA;&lt;p&gt;A few years ago, a colleague asked me: &amp;ldquo;What does the future look like if you&amp;rsquo;re a software engineer?&amp;rdquo; My answer then remains my answer now: AI will not replace software engineers, but it will fundamentally change what we do.&lt;/p&gt;&#xA;&lt;p&gt;We&amp;rsquo;re entering an era of more adaptive, personal software than we&amp;rsquo;ve ever seen before. Today&amp;rsquo;s coding agents can generate entire applications from a single prompt. But here&amp;rsquo;s what most people miss: the hardest problems in software engineering were never about writing the code itself.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

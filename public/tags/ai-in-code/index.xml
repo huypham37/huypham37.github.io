@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ai-in-Code on Your Name - Website</title>
-    <link>http://localhost:1313/tags/ai-in-code/</link>
+    <link>https://huypham37.github.io/tags/ai-in-code/</link>
     <description>Recent content in Ai-in-Code on Your Name - Website</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Thu, 03 Apr 2025 13:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ai-in-code/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://huypham37.github.io/tags/ai-in-code/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>good quote for today</title>
-      <link>http://localhost:1313/til/10_goodquote-fortoday/</link>
+      <link>https://huypham37.github.io/blog/10_goodquote-fortoday/</link>
       <pubDate>Thu, 03 Apr 2025 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/til/10_goodquote-fortoday/</guid>
+      <guid>https://huypham37.github.io/blog/10_goodquote-fortoday/</guid>
       <description>&lt;p&gt;I went through this nice quote that truly align with what I thought for a very long time.&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;If you&amp;rsquo;re a new programmer, my optimistic version is that there has never been a better time to learn to program, because it shaves down the learning curve so much. When you&amp;rsquo;re learning to program and you miss a semicolon and you bang your head against the computer for four hours [&amp;hellip;] if you&amp;rsquo;re unlucky you quit programming for good because it was so frustrating. [&amp;hellip;]&lt;/p&gt;</description>
     </item>
     <item>
       <title>Interesting Anthropic Paper</title>
-      <link>http://localhost:1313/til/12_interesting-papers-from-anthropic/</link>
+      <link>https://huypham37.github.io/blog/12_interesting-papers-from-anthropic/</link>
       <pubDate>Thu, 03 Apr 2025 08:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/til/12_interesting-papers-from-anthropic/</guid>
+      <guid>https://huypham37.github.io/blog/12_interesting-papers-from-anthropic/</guid>
       <description>&lt;p&gt;I went through these two papers which I found truly interesting for anyone has affinity in the development of LLM.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://transformer-circuits.pub/2025/attribution-graphs/methods.html&#34;&gt;Circuit Tracing: Revealing Computational Graphs in Language Models&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://transformer-circuits.pub/2025/attribution-graphs/biology.html&#34;&gt;On the Biology of a Large Language Model&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Why I love writing</title>
-      <link>http://localhost:1313/til/11_why-i-love-writing/</link>
+      <link>https://huypham37.github.io/blog/11_why-i-love-writing/</link>
       <pubDate>Thu, 03 Apr 2025 08:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/til/11_why-i-love-writing/</guid>
+      <guid>https://huypham37.github.io/blog/11_why-i-love-writing/</guid>
       <description>&lt;p&gt;&amp;ldquo;AI will write 90% of the code for software engineers within the next three to six months and every line of code within the next year.&amp;quot;-Anthropic CEO Dario Amodei&lt;/p&gt;&#xA;&lt;p&gt;I would think the same with bullsh** internet contents in the three to six months.&lt;/p&gt;&#xA;&lt;p&gt;That is why I love writing.&lt;/p&gt;&#xA;&lt;p&gt;Even my writing sucks, grammars, vocabularies&amp;hellip;.&lt;/p&gt;&#xA;&lt;p&gt;But who cares, when I dies, this writing is actuall from me, with horrible grammar errors, with terrible vocabs that can bore anyone from the first word. But it is mine,&#xA;not from the freaking robot (AGI, huh?).&lt;/p&gt;</description>
     </item>
   </channel>

@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Setting Up OpenMP on macOS</title>
+        <link rel="stylesheet" href="/css/style.css" />
+        <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Your Name - Website</title>
+    <meta name="description" content="">
+</head>
+</html>
+    </head>
+
+    <body>
+        <!doctype html>
+<html>
+    <head>
+        <title>Your Name - Website</title>
+        <link rel="stylesheet" href="/css/style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about/">About Me</a></li>
+                    <li><a href="/mywork/">My Work</a></li>
+                    <li><a href="/til/">TIL</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li>
+                        <a href="https://github.com/huypham37" target="_blank"
+                            >GitHub</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/huy-pham-200094132/"
+                            target="_blank"
+                            >LinkedIn</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </body>
+</html>
+
+        <main>
+            <div class="window">
+                <div class="window-title">
+                    <h2>📄 Setting Up OpenMP on macOS</h2>
+                </div>
+                <div class="window-content">
+                    <article>
+                        
+                        <div class="til-tags">
+                            <strong>Tags:</strong>
+                            
+                            <a href="/tags/openmp/" class="tag"
+                                >openmp</a
+                            >
+                            
+                            <a href="/tags/macos/" class="tag"
+                                >macos</a
+                            >
+                            
+                            <a href="/tags/clang/" class="tag"
+                                >clang</a
+                            >
+                            
+                            <a href="/tags/llvm/" class="tag"
+                                >llvm</a
+                            >
+                            
+                            <a href="/tags/cmake/" class="tag"
+                                >cmake</a
+                            >
+                            
+                        </div>
+                        
+
+                        <div class="til-content"><h2 id="problem-description">Problem Description</h2>
+<p>When trying to compile OpenMP code on macOS, you might encounter this error:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>fatal error: <span style="color:#e6db74">&#39;omp.h&#39;</span> file not found
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#include &lt;omp.h&gt;</span>
+</span></span><span style="display:flex;"><span>         ^~~~~~~
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">1</span> error generated.
+</span></span></code></pre></div><p>This occurs because Apple&rsquo;s default Clang compiler doesn&rsquo;t include OpenMP support out of the box.</p>
+<h2 id="solution">Solution</h2>
+<h3 id="1-install-llvm-using-homebrew">1. Install LLVM using Homebrew</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>brew install llvm
+</span></span></code></pre></div><h3 id="2-set-up-environment-variables">2. Set up Environment Variables</h3>
+<p>Add these lines to your <code>~/.zshrc</code> (or <code>~/.bash_profile</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># LLVM/OpenMP configuration</span>
+</span></span><span style="display:flex;"><span>export PATH<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/opt/homebrew/opt/llvm/bin:</span>$PATH<span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>export CC<span style="color:#f92672">=</span>/opt/homebrew/opt/llvm/bin/clang
+</span></span><span style="display:flex;"><span>export CXX<span style="color:#f92672">=</span>/opt/homebrew/opt/llvm/bin/clang++
+</span></span><span style="display:flex;"><span>export LDFLAGS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-L/opt/homebrew/opt/llvm/lib&#34;</span>
+</span></span><span style="display:flex;"><span>export CPPFLAGS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;-I/opt/homebrew/opt/llvm/include&#34;</span>
+</span></span></code></pre></div><p>Then reload your shell configuration:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>source ~/.zshrc
+</span></span></code></pre></div><h3 id="3-update-cmakeliststxt">3. Update CMakeLists.txt</h3>
+<p>Force CMake to use LLVM&rsquo;s Clang before the project declaration:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cmake" data-lang="cmake"><span style="display:flex;"><span>cmake_minimum_required(<span style="color:#e6db74">VERSION</span> <span style="color:#e6db74">3.14</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Force CMake to use LLVM compiler before project() declaration
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>set(<span style="color:#e6db74">CMAKE_C_COMPILER</span> <span style="color:#e6db74">&#34;/opt/homebrew/opt/llvm/bin/clang&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>set(<span style="color:#e6db74">CMAKE_CXX_COMPILER</span> <span style="color:#e6db74">&#34;/opt/homebrew/opt/llvm/bin/clang++&#34;</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>project(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">openmp</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">VERSION</span> <span style="color:#e6db74">0.1.0</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">DESCRIPTION</span> <span style="color:#e6db74">&#34;Your project description&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">LANGUAGES</span> <span style="color:#e6db74">CXX</span>
+</span></span><span style="display:flex;"><span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Add OpenMP support
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>find_package(<span style="color:#e6db74">OpenMP</span> <span style="color:#e6db74">REQUIRED</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span><span style="color:#75715e"># Add OpenMP to your targets
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>target_link_libraries(<span style="color:#e6db74">your_target</span> <span style="color:#e6db74">PRIVATE</span> <span style="color:#e6db74">OpenMP::OpenMP_CXX</span>)<span style="color:#960050;background-color:#1e0010">
+</span></span></span></code></pre></div><h3 id="4-build-the-project">4. Build the Project</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mkdir build
+</span></span><span style="display:flex;"><span>cd build
+</span></span><span style="display:flex;"><span>cmake ..
+</span></span><span style="display:flex;"><span>cmake --build .
+</span></span></code></pre></div><h2 id="understanding-the-fix">Understanding the Fix</h2>
+<ol>
+<li>
+<p><strong>Why this works</strong>:</p>
+<ul>
+<li>LLVM&rsquo;s version of Clang includes OpenMP support</li>
+<li>Setting compiler paths before <code>project()</code> ensures CMake uses the correct compiler</li>
+<li>Environment variables ensure system-wide availability of LLVM tools</li>
+</ul>
+</li>
+<li>
+<p><strong>Key Commands</strong>:</p>
+<ul>
+<li><code>cmake ..</code> - Generates build system using parent directory&rsquo;s CMakeLists.txt</li>
+<li><code>cmake --build .</code> - Compiles the code using generated build system</li>
+</ul>
+</li>
+<li>
+<p><strong>Environment Variables Purpose</strong>:</p>
+<ul>
+<li><code>PATH</code>: Makes LLVM binaries available system-wide</li>
+<li><code>CC/CXX</code>: Sets default C/C++ compilers</li>
+<li><code>LDFLAGS/CPPFLAGS</code>: Provides linker and preprocessor with LLVM library locations</li>
+</ul>
+</li>
+</ol>
+<h2 id="verification">Verification</h2>
+<p>To verify the setup:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>which clang++  <span style="color:#75715e"># Should show /opt/homebrew/opt/llvm/bin/clang++</span>
+</span></span><span style="display:flex;"><span>clang++ --version  <span style="color:#75715e"># Should show LLVM version</span>
+</span></span></code></pre></div><p>Your OpenMP programs should now compile and run successfully on macOS.</p>
+</div>
+                    </article>
+                </div>
+            </div>
+        </main>
+        <footer>
+    <p>&copy; 2025 Huy Pham. All rights reserved.</p>
+    <p>
+        <a href="https://github.com/huypham37" target="_blank">GitHub</a> |
+        <a
+            href="https://www.linkedin.com/in/huy-pham-200094132/"
+            target="_blank"
+            >LinkedIn</a
+        >
+    </p>
+</footer>
+
+    </body>
+</html>

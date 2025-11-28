@@ -2,125 +2,137 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/til/</loc>
+    <loc>https://huypham37.github.io/blog/</loc>
+    <lastmod>2025-11-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://huypham37.github.io/tags/ai/</loc>
+    <lastmod>2025-11-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://huypham37.github.io/tags/future/</loc>
+    <lastmod>2025-11-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://huypham37.github.io/tags/generative-software/</loc>
+    <lastmod>2025-11-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://huypham37.github.io/tags/software-engineering/</loc>
+    <lastmod>2025-11-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://huypham37.github.io/tags/</loc>
+    <lastmod>2025-11-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://huypham37.github.io/blog/13_rise-of-generative-software/</loc>
+    <lastmod>2025-11-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://huypham37.github.io/</loc>
+    <lastmod>2025-11-28T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://huypham37.github.io/tags/ai-in-code/</loc>
     <lastmod>2025-04-03T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ai/</loc>
+    <loc>https://huypham37.github.io/blog/10_goodquote-fortoday/</loc>
     <lastmod>2025-04-03T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/ai-in-code/</loc>
+    <loc>https://huypham37.github.io/tags/quote/</loc>
     <lastmod>2025-04-03T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/til/10_goodquote-fortoday/</loc>
-    <lastmod>2025-04-03T13:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/quote/</loc>
-    <lastmod>2025-04-03T13:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
-    <lastmod>2025-04-03T13:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-04-03T13:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/ai-in-content/</loc>
+    <loc>https://huypham37.github.io/tags/ai-in-content/</loc>
     <lastmod>2025-04-03T08:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/til/12_interesting-papers-from-anthropic/</loc>
+    <loc>https://huypham37.github.io/blog/12_interesting-papers-from-anthropic/</loc>
     <lastmod>2025-04-03T08:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/research-papers/</loc>
+    <loc>https://huypham37.github.io/tags/research-papers/</loc>
     <lastmod>2025-04-03T08:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/til/11_why-i-love-writing/</loc>
+    <loc>https://huypham37.github.io/blog/11_why-i-love-writing/</loc>
     <lastmod>2025-04-03T08:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/writing/</loc>
+    <loc>https://huypham37.github.io/tags/writing/</loc>
     <lastmod>2025-04-03T08:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/coding/</loc>
+    <loc>https://huypham37.github.io/tags/coding/</loc>
     <lastmod>2025-03-19T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/til/08_morepeopleshouldcode/</loc>
+    <loc>https://huypham37.github.io/blog/08_morepeopleshouldcode/</loc>
     <lastmod>2025-03-19T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/llm/</loc>
+    <loc>https://huypham37.github.io/tags/llm/</loc>
     <lastmod>2025-03-14T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/productivity/</loc>
+    <loc>https://huypham37.github.io/tags/productivity/</loc>
     <lastmod>2025-03-14T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/programming/</loc>
+    <loc>https://huypham37.github.io/tags/programming/</loc>
     <lastmod>2025-03-14T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/til/07-whyilovellm/</loc>
+    <loc>https://huypham37.github.io/blog/07-whyilovellm/</loc>
     <lastmod>2025-03-14T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/agentic-ai/</loc>
+    <loc>https://huypham37.github.io/tags/agentic-ai/</loc>
     <lastmod>2025-02-25T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/til/09-agentic-ai/</loc>
+    <loc>https://huypham37.github.io/blog/09-agentic-ai/</loc>
     <lastmod>2025-02-25T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/insights/</loc>
+    <loc>https://huypham37.github.io/tags/insights/</loc>
     <lastmod>2025-02-25T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/tips/</loc>
+    <loc>https://huypham37.github.io/tags/tips/</loc>
     <lastmod>2025-02-25T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/generative-ai/</loc>
+    <loc>https://huypham37.github.io/tags/generative-ai/</loc>
     <lastmod>2025-02-24T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/til/05-agentic-ai/</loc>
+    <loc>https://huypham37.github.io/blog/05-agentic-ai/</loc>
     <lastmod>2025-02-24T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/copilot/</loc>
+    <loc>https://huypham37.github.io/tags/copilot/</loc>
     <lastmod>2025-02-23T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/pair-programming/</loc>
+    <loc>https://huypham37.github.io/tags/pair-programming/</loc>
     <lastmod>2025-02-23T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/til/04-working-with-copilot/</loc>
+    <loc>https://huypham37.github.io/blog/04-working-with-copilot/</loc>
     <lastmod>2025-02-23T13:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/til/third-til/</loc>
+    <loc>https://huypham37.github.io/blog/third-til/</loc>
     <lastmod>2025-02-23T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cpp/</loc>
+    <loc>https://huypham37.github.io/tags/cpp/</loc>
     <lastmod>2025-02-23T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/multithreading/</loc>
+    <loc>https://huypham37.github.io/tags/multithreading/</loc>
     <lastmod>2025-02-23T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/openmp/</loc>
+    <loc>https://huypham37.github.io/tags/openmp/</loc>
     <lastmod>2025-02-23T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/parallel-computing/</loc>
+    <loc>https://huypham37.github.io/tags/parallel-computing/</loc>
     <lastmod>2025-02-23T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/til/second-til/</loc>
+    <loc>https://huypham37.github.io/blog/second-til/</loc>
     <lastmod>2025-02-23T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/clang/</loc>
+    <loc>https://huypham37.github.io/tags/clang/</loc>
     <lastmod>2025-02-22T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/cmake/</loc>
+    <loc>https://huypham37.github.io/tags/cmake/</loc>
     <lastmod>2025-02-22T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/llvm/</loc>
+    <loc>https://huypham37.github.io/tags/llvm/</loc>
     <lastmod>2025-02-22T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/macos/</loc>
+    <loc>https://huypham37.github.io/tags/macos/</loc>
     <lastmod>2025-02-22T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/til/first-til/</loc>
+    <loc>https://huypham37.github.io/blog/first-til/</loc>
     <lastmod>2025-02-22T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/about/</loc>
+    <loc>https://huypham37.github.io/about/</loc>
     <lastmod>2025-02-20T12:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/mywork/</loc>
+    <loc>https://huypham37.github.io/mywork/</loc>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://huypham37.github.io/categories/</loc>
   </url>
 </urlset>

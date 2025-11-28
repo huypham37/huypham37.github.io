@@ -1,6 +1,6 @@
 <!-- filepath: /Users/mac/CodeLab/my-website/content/til/_index.md -->
 ---
-title: "Today I Learned"
+title: "Blog"
 ---
 
-Welcome to my TIL section!
+Welcome to my blog!

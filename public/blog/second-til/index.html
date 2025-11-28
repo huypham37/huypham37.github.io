@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+    <head>
+        <title>std::cout is Not Thread-Safe: Using stringstream for Safe Multithreaded Output in C&#43;&#43;</title>
+        <link rel="stylesheet" href="/css/style.css" />
+        <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Your Name - Website</title>
+    <meta name="description" content="">
+</head>
+</html>
+    </head>
+
+    <body>
+        <!doctype html>
+<html>
+    <head>
+        <title>Your Name - Website</title>
+        <link rel="stylesheet" href="/css/style.css" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about/">About Me</a></li>
+                    <li><a href="/mywork/">My Work</a></li>
+                    <li><a href="/til/">TIL</a></li>
+                    <li><a href="/tutorials/">Tutorials</a></li>
+                    <li>
+                        <a href="https://github.com/huypham37" target="_blank"
+                            >GitHub</a
+                        >
+                    </li>
+                    <li>
+                        <a
+                            href="https://www.linkedin.com/in/huy-pham-200094132/"
+                            target="_blank"
+                            >LinkedIn</a
+                        >
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </body>
+</html>
+
+        <main>
+            <div class="window">
+                <div class="window-title">
+                    <h2>📄 std::cout is Not Thread-Safe: Using stringstream for Safe Multithreaded Output in C&#43;&#43;</h2>
+                </div>
+                <div class="window-content">
+                    <article>
+                        
+                        <div class="til-tags">
+                            <strong>Tags:</strong>
+                            
+                            <a href="/tags/cpp/" class="tag"
+                                >cpp</a
+                            >
+                            
+                            <a href="/tags/multithreading/" class="tag"
+                                >multithreading</a
+                            >
+                            
+                        </div>
+                        
+
+                        <div class="til-content"><p>Today I learned that <code>std::cout</code> is not thread-safe by default. When multiple threads try to write to <code>std::cout</code> simultaneously, the output can become jumbled and garbled due to race conditions.</p>
+<h2 id="the-problem">The Problem</h2>
+<p>Consider this problematic code:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#pragma omp parallel
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> thread_id <span style="color:#f92672">=</span> omp_get_num_threads();
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Hello from thread &#34;</span> <span style="color:#f92672">&lt;&lt;</span> thread_id <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>This can produce jumbled output like:</p>
+<pre tabindex="0"><code>Hello Hello from thread from thread 12
+Hello from thread 3
+</code></pre><h2 id="the-solution-using-stringstream">The Solution: Using stringstream</h2>
+<p>A better approach is to use <code>std::stringstream</code> to build the complete string in thread-local storage before writing to <code>std::cout</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#pragma omp parallel
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> thread_id <span style="color:#f92672">=</span> omp_get_num_threads();
+</span></span><span style="display:flex;"><span>    std<span style="color:#f92672">::</span>stringstream ss;
+</span></span><span style="display:flex;"><span>    ss <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Hello from thread &#34;</span> <span style="color:#f92672">&lt;&lt;</span> thread_id <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Convert to string first
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    std<span style="color:#f92672">::</span>string output <span style="color:#f92672">=</span> ss.str();
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Write the complete string at once
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> output;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h2 id="why-this-works">Why This Works</h2>
+<ol>
+<li><code>std::stringstream</code> creates a thread-local buffer for building the output string</li>
+<li>The string construction happens entirely within each thread</li>
+<li>The final write to <code>std::cout</code> is more likely to be atomic when writing a single string</li>
+<li>Each thread maintains its own independent stringstream, preventing race conditions</li>
+</ol>
+<h2 id="alternative-using-critical-sections">Alternative: Using Critical Sections</h2>
+<p>If you really need to use <code>std::cout</code> directly, you can also use OpenMP&rsquo;s critical section:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cpp" data-lang="cpp"><span style="display:flex;"><span><span style="color:#75715e">#pragma omp parallel
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">int</span> thread_id <span style="color:#f92672">=</span> omp_get_num_threads();
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">#pragma omp critical
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    {
+</span></span><span style="display:flex;"><span>        std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;Hello from thread &#34;</span> <span style="color:#f92672">&lt;&lt;</span> thread_id <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>However, using <code>stringstream</code> is often more efficient as it minimizes the time spent in critical sections.</p>
+<h2 id="key-takeaway">Key Takeaway</h2>
+<p>When dealing with multithreaded output in C++, always remember that <code>std::cout</code> operations are not thread-safe. Use <code>std::stringstream</code> to build output strings locally before writing them, or properly synchronize access to <code>std::cout</code> using critical sections or mutexes.</p>
+</div>
+                    </article>
+                </div>
+            </div>
+        </main>
+        <footer>
+    <p>&copy; 2025 Huy Pham. All rights reserved.</p>
+    <p>
+        <a href="https://github.com/huypham37" target="_blank">GitHub</a> |
+        <a
+            href="https://www.linkedin.com/in/huy-pham-200094132/"
+            target="_blank"
+            >LinkedIn</a
+        >
+    </p>
+</footer>
+
+    </body>
+</html>

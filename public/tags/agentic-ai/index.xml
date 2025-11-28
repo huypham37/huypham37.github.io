@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Agentic-Ai on Your Name - Website</title>
-    <link>http://localhost:1313/tags/agentic-ai/</link>
+    <link>https://huypham37.github.io/tags/agentic-ai/</link>
     <description>Recent content in Agentic-Ai on Your Name - Website</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 25 Feb 2025 13:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/agentic-ai/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://huypham37.github.io/tags/agentic-ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Everyone talks about Agentic AI</title>
-      <link>http://localhost:1313/til/09-agentic-ai/</link>
+      <link>https://huypham37.github.io/blog/09-agentic-ai/</link>
       <pubDate>Tue, 25 Feb 2025 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/til/09-agentic-ai/</guid>
+      <guid>https://huypham37.github.io/blog/09-agentic-ai/</guid>
       <description>&lt;p&gt;“Big data is like teenage sex: everyone talks about it, nobody really knows how to do it, everyone thinks everyone else is doing it, so everyone claims they are doing it.” - Dan Ariely&#xA;This is still true with current agentic ai discussion.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Non-Agentic vs. Agentic AI: Beyond the Generative Hype</title>
-      <link>http://localhost:1313/til/05-agentic-ai/</link>
+      <link>https://huypham37.github.io/blog/05-agentic-ai/</link>
       <pubDate>Mon, 24 Feb 2025 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/til/05-agentic-ai/</guid>
-      <description>&lt;p&gt;The hype of generative AI is gone; people now are more familiar with what a generative AI can do. But I think there is a lot more an AI (or specifically a LLM) can do, more than just &amp;ldquo;Write me an essay in 4000 words like a first year college student.&amp;rdquo;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Non-agentic AI:&lt;/strong&gt; This is basically a generative AI which you give it an input, give you an output, no recheck, no question, no feedback. It&amp;rsquo;s like a robot that you give it a command, it does it, and that&amp;rsquo;s it.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;img src=&#34;http://localhost:1313/img/non-agnetic-flow.png&#34; alt=&#34;Non-Agentic AI Workflow&#34; width=&#34;700&#34; height=&#34;400&#34;&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Agentic AI:&lt;/strong&gt; A generative AI with a set of tools. The newest application of agentic AI is deep research or deep search from multiple frontier AI companies like OpenAI, Deepseek or Google - AI which can talk to an API, send requests to websites, surf the web, re-check the value and produce a result. The typical agentic AI workflow would look like this:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;img src=&#34;http://localhost:1313/img/agentic-ai-flow.png&#34; alt=&#34;Agentic AI Workflow&#34; width=&#34;700&#34; height=&#34;400&#34;&gt;</description>
+      <guid>https://huypham37.github.io/blog/05-agentic-ai/</guid>
+      <description>&lt;p&gt;The hype of generative AI is gone; people now are more familiar with what a generative AI can do. But I think there is a lot more an AI (or specifically a LLM) can do, more than just &amp;ldquo;Write me an essay in 4000 words like a first year college student.&amp;rdquo;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Non-agentic AI:&lt;/strong&gt; This is basically a generative AI which you give it an input, give you an output, no recheck, no question, no feedback. It&amp;rsquo;s like a robot that you give it a command, it does it, and that&amp;rsquo;s it.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;img src=&#34;https://huypham37.github.io/img/non-agnetic-flow.png&#34; alt=&#34;Non-Agentic AI Workflow&#34; width=&#34;700&#34; height=&#34;400&#34;&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Agentic AI:&lt;/strong&gt; A generative AI with a set of tools. The newest application of agentic AI is deep research or deep search from multiple frontier AI companies like OpenAI, Deepseek or Google - AI which can talk to an API, send requests to websites, surf the web, re-check the value and produce a result. The typical agentic AI workflow would look like this:&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;img src=&#34;https://huypham37.github.io/img/agentic-ai-flow.png&#34; alt=&#34;Agentic AI Workflow&#34; width=&#34;700&#34; height=&#34;400&#34;&gt;</description>
     </item>
   </channel>
 </rss>

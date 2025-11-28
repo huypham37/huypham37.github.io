@@ -2,178 +2,199 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Your Name - Website</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>https://huypham37.github.io/tags/</link>
     <description>Recent content in Tags on Your Name - Website</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 03 Apr 2025 13:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 28 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://huypham37.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>AI</title>
-      <link>http://localhost:1313/tags/ai/</link>
-      <pubDate>Thu, 03 Apr 2025 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ai/</guid>
+      <title>Ai</title>
+      <link>https://huypham37.github.io/tags/ai/</link>
+      <pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://huypham37.github.io/tags/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Future</title>
+      <link>https://huypham37.github.io/tags/future/</link>
+      <pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://huypham37.github.io/tags/future/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Generative-Software</title>
+      <link>https://huypham37.github.io/tags/generative-software/</link>
+      <pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://huypham37.github.io/tags/generative-software/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software-Engineering</title>
+      <link>https://huypham37.github.io/tags/software-engineering/</link>
+      <pubDate>Fri, 28 Nov 2025 00:00:00 +0000</pubDate>
+      <guid>https://huypham37.github.io/tags/software-engineering/</guid>
       <description></description>
     </item>
     <item>
       <title>Ai-in-Code</title>
-      <link>http://localhost:1313/tags/ai-in-code/</link>
+      <link>https://huypham37.github.io/tags/ai-in-code/</link>
       <pubDate>Thu, 03 Apr 2025 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ai-in-code/</guid>
+      <guid>https://huypham37.github.io/tags/ai-in-code/</guid>
       <description></description>
     </item>
     <item>
       <title>Quote</title>
-      <link>http://localhost:1313/tags/quote/</link>
+      <link>https://huypham37.github.io/tags/quote/</link>
       <pubDate>Thu, 03 Apr 2025 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/quote/</guid>
+      <guid>https://huypham37.github.io/tags/quote/</guid>
       <description></description>
     </item>
     <item>
       <title>Ai-in-Content</title>
-      <link>http://localhost:1313/tags/ai-in-content/</link>
+      <link>https://huypham37.github.io/tags/ai-in-content/</link>
       <pubDate>Thu, 03 Apr 2025 08:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/ai-in-content/</guid>
+      <guid>https://huypham37.github.io/tags/ai-in-content/</guid>
       <description></description>
     </item>
     <item>
       <title>Research-Papers</title>
-      <link>http://localhost:1313/tags/research-papers/</link>
+      <link>https://huypham37.github.io/tags/research-papers/</link>
       <pubDate>Thu, 03 Apr 2025 08:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/research-papers/</guid>
+      <guid>https://huypham37.github.io/tags/research-papers/</guid>
       <description></description>
     </item>
     <item>
       <title>Writing</title>
-      <link>http://localhost:1313/tags/writing/</link>
+      <link>https://huypham37.github.io/tags/writing/</link>
       <pubDate>Thu, 03 Apr 2025 08:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/writing/</guid>
+      <guid>https://huypham37.github.io/tags/writing/</guid>
       <description></description>
     </item>
     <item>
       <title>Coding</title>
-      <link>http://localhost:1313/tags/coding/</link>
+      <link>https://huypham37.github.io/tags/coding/</link>
       <pubDate>Wed, 19 Mar 2025 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/coding/</guid>
+      <guid>https://huypham37.github.io/tags/coding/</guid>
       <description></description>
     </item>
     <item>
       <title>Llm</title>
-      <link>http://localhost:1313/tags/llm/</link>
+      <link>https://huypham37.github.io/tags/llm/</link>
       <pubDate>Fri, 14 Mar 2025 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/llm/</guid>
+      <guid>https://huypham37.github.io/tags/llm/</guid>
       <description></description>
     </item>
     <item>
       <title>Productivity</title>
-      <link>http://localhost:1313/tags/productivity/</link>
+      <link>https://huypham37.github.io/tags/productivity/</link>
       <pubDate>Fri, 14 Mar 2025 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/productivity/</guid>
+      <guid>https://huypham37.github.io/tags/productivity/</guid>
       <description></description>
     </item>
     <item>
       <title>Programming</title>
-      <link>http://localhost:1313/tags/programming/</link>
+      <link>https://huypham37.github.io/tags/programming/</link>
       <pubDate>Fri, 14 Mar 2025 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/programming/</guid>
+      <guid>https://huypham37.github.io/tags/programming/</guid>
       <description></description>
     </item>
     <item>
       <title>Agentic-Ai</title>
-      <link>http://localhost:1313/tags/agentic-ai/</link>
+      <link>https://huypham37.github.io/tags/agentic-ai/</link>
       <pubDate>Tue, 25 Feb 2025 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/agentic-ai/</guid>
+      <guid>https://huypham37.github.io/tags/agentic-ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Insights</title>
-      <link>http://localhost:1313/tags/insights/</link>
+      <link>https://huypham37.github.io/tags/insights/</link>
       <pubDate>Tue, 25 Feb 2025 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/insights/</guid>
+      <guid>https://huypham37.github.io/tags/insights/</guid>
       <description></description>
     </item>
     <item>
       <title>Tips</title>
-      <link>http://localhost:1313/tags/tips/</link>
+      <link>https://huypham37.github.io/tags/tips/</link>
       <pubDate>Tue, 25 Feb 2025 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/tips/</guid>
+      <guid>https://huypham37.github.io/tags/tips/</guid>
       <description></description>
     </item>
     <item>
       <title>Generative-Ai</title>
-      <link>http://localhost:1313/tags/generative-ai/</link>
+      <link>https://huypham37.github.io/tags/generative-ai/</link>
       <pubDate>Mon, 24 Feb 2025 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/generative-ai/</guid>
+      <guid>https://huypham37.github.io/tags/generative-ai/</guid>
       <description></description>
     </item>
     <item>
       <title>Copilot</title>
-      <link>http://localhost:1313/tags/copilot/</link>
+      <link>https://huypham37.github.io/tags/copilot/</link>
       <pubDate>Sun, 23 Feb 2025 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/copilot/</guid>
+      <guid>https://huypham37.github.io/tags/copilot/</guid>
       <description></description>
     </item>
     <item>
       <title>Pair-Programming</title>
-      <link>http://localhost:1313/tags/pair-programming/</link>
+      <link>https://huypham37.github.io/tags/pair-programming/</link>
       <pubDate>Sun, 23 Feb 2025 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/pair-programming/</guid>
+      <guid>https://huypham37.github.io/tags/pair-programming/</guid>
       <description></description>
     </item>
     <item>
       <title>Cpp</title>
-      <link>http://localhost:1313/tags/cpp/</link>
+      <link>https://huypham37.github.io/tags/cpp/</link>
       <pubDate>Sun, 23 Feb 2025 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cpp/</guid>
+      <guid>https://huypham37.github.io/tags/cpp/</guid>
       <description></description>
     </item>
     <item>
       <title>Multithreading</title>
-      <link>http://localhost:1313/tags/multithreading/</link>
+      <link>https://huypham37.github.io/tags/multithreading/</link>
       <pubDate>Sun, 23 Feb 2025 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/multithreading/</guid>
+      <guid>https://huypham37.github.io/tags/multithreading/</guid>
       <description></description>
     </item>
     <item>
       <title>Openmp</title>
-      <link>http://localhost:1313/tags/openmp/</link>
+      <link>https://huypham37.github.io/tags/openmp/</link>
       <pubDate>Sun, 23 Feb 2025 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/openmp/</guid>
+      <guid>https://huypham37.github.io/tags/openmp/</guid>
       <description></description>
     </item>
     <item>
       <title>Parallel-Computing</title>
-      <link>http://localhost:1313/tags/parallel-computing/</link>
+      <link>https://huypham37.github.io/tags/parallel-computing/</link>
       <pubDate>Sun, 23 Feb 2025 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/parallel-computing/</guid>
+      <guid>https://huypham37.github.io/tags/parallel-computing/</guid>
       <description></description>
     </item>
     <item>
       <title>Clang</title>
-      <link>http://localhost:1313/tags/clang/</link>
+      <link>https://huypham37.github.io/tags/clang/</link>
       <pubDate>Sat, 22 Feb 2025 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/clang/</guid>
+      <guid>https://huypham37.github.io/tags/clang/</guid>
       <description></description>
     </item>
     <item>
       <title>Cmake</title>
-      <link>http://localhost:1313/tags/cmake/</link>
+      <link>https://huypham37.github.io/tags/cmake/</link>
       <pubDate>Sat, 22 Feb 2025 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/cmake/</guid>
+      <guid>https://huypham37.github.io/tags/cmake/</guid>
       <description></description>
     </item>
     <item>
       <title>Llvm</title>
-      <link>http://localhost:1313/tags/llvm/</link>
+      <link>https://huypham37.github.io/tags/llvm/</link>
       <pubDate>Sat, 22 Feb 2025 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/llvm/</guid>
+      <guid>https://huypham37.github.io/tags/llvm/</guid>
       <description></description>
     </item>
     <item>
       <title>Macos</title>
-      <link>http://localhost:1313/tags/macos/</link>
+      <link>https://huypham37.github.io/tags/macos/</link>
       <pubDate>Sat, 22 Feb 2025 12:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/tags/macos/</guid>
+      <guid>https://huypham37.github.io/tags/macos/</guid>
       <description></description>
     </item>
   </channel>
