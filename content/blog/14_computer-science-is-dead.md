@@ -6,8 +6,6 @@ tags: ["computer-science", "ai", "education", "perspective"]
 image: "/Assets/computerisdead.jpg"
 ---
 
-## Why understanding systems matters more than job security
-
 ### The Death Announcement Cycle
 
 I've been hearing about the death of computer science since GPT-3.5 launched. I was among the first in my circle to try it. And every time a new model drops—Claude Opus, GPT-5, Gemini, whatever—the chorus returns: "Computer science is dead."
