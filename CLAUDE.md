@@ -1,1 +1,0 @@
-- please check the SKILLS.md to grasp the neccessary skills to complete task

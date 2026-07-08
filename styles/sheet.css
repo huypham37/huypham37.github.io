@@ -1,0 +1,273 @@
+/* ─── sheet ──────────────────────────────────────────── */
+.sheet {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 1040px;
+  background: var(--paper);
+  box-shadow:
+    0 1px 0 rgba(0,0,0,.05),
+    0 8px 24px rgba(60,50,30,.10),
+    0 32px 80px rgba(60,50,30,.10);
+  padding: 48px 60px 72px;
+}
+
+.sheet > * { position: relative; z-index: 2; }
+
+/* ─── title block ────────────────────────────────────── */
+.title-block {
+  margin: 56px 0 36px;
+  text-align: center;
+}
+.title-block .meta {
+  font-family: var(--mono);
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 28px;
+}
+.title-block h1 {
+  font-family: "Arizona Test", var(--writing);
+  font-weight: 400;
+  font-size: var(--fs-title);
+  line-height: var(--lh-title);
+  letter-spacing: -.02em;
+  -webkit-text-stroke: .25px var(--paper);
+}
+.title-block .sub {
+  margin: 18px auto 0;
+  max-width: 540px;
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+
+/* ─── rule (separator) ───────────────────────────────── */
+.rule {
+  margin: 18px 0 56px;
+  font-family: var(--mono);
+  font-size: var(--fs-small);
+  letter-spacing: .1em;
+  color: var(--ink-soft);
+}
+
+/* ─── article (single-column, book-like) ─────────────── */
+.article {
+  display: block;
+  max-width: var(--measure);
+  margin: 0 auto;
+}
+.article .body p {
+  text-align: justify;
+  hyphens: auto;
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+}
+.article .body p + p { margin-top: 12px; }
+.article .body h2,
+.article .body h3 {
+  font-family: var(--writing);
+  font-weight: 600;
+  line-height: var(--lh-heading);
+  margin: 44px 0 12px;
+  text-indent: 0;
+}
+.article .body h2 { font-size: var(--fs-heading); }
+.article .body h3 { font-size: 18px; }
+.article .body h2 .num {
+  color: var(--blue);
+  margin-right: 14px;
+  font-weight: 500;
+  display: inline-block;
+}
+.article .body em { font-style: italic; }
+.article .body strong { font-weight: 700; }
+.article .body a,
+.article .body a.tx {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color .2s;
+}
+.article .body a:hover,
+.article .body a.tx:hover { color: var(--blue); }
+.article .body sup.ref {
+  color: var(--blue);
+  font-family: var(--mono);
+  font-size: var(--fs-small);
+  vertical-align: super;
+  margin-left: 1px;
+  cursor: pointer;
+}
+.article .body pre {
+  margin: 24px 0;
+  padding: 16px 18px;
+  border: 1px solid var(--hairline-strong);
+  font-family: var(--mono);
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+  overflow: auto;
+  white-space: pre;
+}
+.article .body code {
+  font-family: var(--mono);
+  font-size: .92em;
+}
+.article .body img {
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--img-measure);
+  max-width: 92vw;
+  height: auto;
+  margin: 28px 0;
+  border: 1px solid var(--hairline-strong);
+}
+
+/* ─── figure (markdown plates) ───────────────────────── */
+.article .body { counter-reset: figure; }
+
+.article .body figure {
+  counter-increment: figure;
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: var(--img-measure);
+  max-width: 92vw;
+  margin: 28px 0;
+}
+
+/* figure owns layout, so neutralise the standalone img rule */
+.article .body figure img {
+  position: static;
+  left: auto;
+  transform: none;
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+}
+
+.article .body figcaption {
+  margin-top: 10px;
+  font-family: var(--writing);
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+  font-style: normal;
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+.article .body figcaption::before {
+  content: "Fig. " counter(figure) " · ";
+  font-style: italic;
+  color: var(--blue);
+}
+
+.sidenotes {
+  margin-top: 48px;
+  padding-top: 16px;
+  border-top: 1px solid var(--hairline-strong);
+}
+.sidenotes::before {
+  content: "Notes";
+  display: block;
+  font-family: var(--mono);
+  font-size: var(--fs-small);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-bottom: 12px;
+}
+.sidenote {
+  font-family: var(--writing);
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+  color: var(--ink-soft);
+  font-style: italic;
+  margin-bottom: 12px;
+}
+.sidenote .num {
+  color: var(--blue);
+  font-style: normal;
+  font-family: var(--mono);
+  font-size: var(--fs-small);
+  margin-right: 6px;
+  vertical-align: super;
+}
+
+/* ─── frame (figure) ─────────────────────────────────── */
+.frame {
+  border: 1px solid var(--ink);
+  padding: 28px 24px 22px;
+  margin: 40px 0 24px;
+  position: relative;
+  max-width: var(--col);
+}
+.frame .label {
+  position: absolute;
+  top: -7px; left: 18px;
+  background: var(--paper);
+  padding: 0 10px;
+  font-family: var(--mono);
+  font-size: var(--fs-small);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.frame pre {
+  font-family: var(--mono);
+  font-size: var(--fs-small);
+  line-height: var(--lh-small);
+  white-space: pre;
+  overflow: auto;
+}
+.frame figcaption {
+  font-style: italic;
+  font-size: var(--fs-small);
+  color: var(--ink-soft);
+  margin-top: 14px;
+  text-align: center;
+}
+
+/* ─── edge label ─────────────────────────────────────── */
+.edge-label {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  writing-mode: vertical-rl;
+  transform: translateY(-50%) rotate(180deg);
+  font-family: var(--mono);
+  font-size: var(--fs-small);
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  z-index: 3;
+}
+
+/* ─── pagination ─────────────────────────────────────── */
+.pagination {
+  margin-top: 56px;
+  padding-top: 16px;
+  border-top: 1px solid var(--hairline-strong);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--mono);
+  font-size: var(--fs-small);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.pagination .center { text-align: center; }
+.pagination .right  { text-align: right; }
+.pagination a {
+  color: var(--ink);
+  text-decoration: none;
+  transition: color .2s;
+}
+.pagination a:hover { color: var(--blue); }

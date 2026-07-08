@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>reinventthewheel — style guide v0.1</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="./styles/page.css" />
+</head>
+
+<body>
+
+  <!-- ── left table of contents for the current writing ── -->
+  <aside class="writing-sidebar" aria-label="Table of contents">
+    <div class="writing-sidebar__logo">reinvent<br>thewheel</div>
+    <div class="writing-sidebar__kicker">Writing / terminals</div>
+
+    <div class="writing-toc">
+      <section class="toc-section" aria-labelledby="toc-bytes">
+        <h2 id="toc-bytes"><span class="num">1.</span> Bytes and Control</h2>
+        <ul>
+          <li><a href="#">What is a terminal?</a></li>
+          <li><a href="#">Pseudo-terminal stream.</a></li>
+          <li><a href="#">Escape sequences.</a></li>
+        </ul>
+      </section>
+
+      <section class="toc-section" aria-labelledby="toc-grid">
+        <h2 id="toc-grid"><span class="num">2.</span> Grid and State</h2>
+        <ul>
+          <li><a href="#">Cells and attributes.</a></li>
+          <li><a href="#">Scrollback.</a></li>
+          <li><a href="#">Cursor model.</a></li>
+        </ul>
+      </section>
+
+      <section class="toc-section" aria-labelledby="toc-glyphs">
+        <h2 id="toc-glyphs"><span class="num">3.</span> Fonts and Glyphs</h2>
+        <ul>
+          <li><a href="#">Font shaping.</a></li>
+          <li><a href="#">Glyph cache.</a></li>
+          <li class="is-current"><a href="#drawing-glyphs" aria-current="true">Principles of drawing glyphs.</a></li>
+        </ul>
+      </section>
+
+      <section class="toc-section" aria-labelledby="toc-gpu">
+        <h2 id="toc-gpu"><span class="num">4.</span> GPU Rendering</h2>
+        <ul>
+          <li><a href="#">Texture atlas.</a></li>
+          <li><a href="#">Fragment shader.</a></li>
+          <li><a href="#">Frame pacing.</a></li>
+        </ul>
+      </section>
+
+      <section class="toc-section" aria-labelledby="toc-ghostty">
+        <h2 id="toc-ghostty"><span class="num">5.</span> Ghostty Notes</h2>
+        <ul>
+          <li><a href="#">Zig renderer.</a></li>
+          <li><a href="#">Platform surfaces.</a></li>
+          <li><a href="#">Open questions.</a></li>
+        </ul>
+      </section>
+    </div>
+  </aside>
+
+  <main class="sheet" id="terminal-rendering">
+
+    <!-- ── title block ── -->
+    <section class="title-block">
+      <div class="meta">
+        SECTION 02 <span class="accent">— DEEPDIVE</span> &nbsp;·&nbsp; 2026.05.12 &nbsp;·&nbsp; STATUS: DRAFT
+      </div>
+      <h1>How a Terminal<br>is Drawn</h1>
+      <div class="sub">
+        Pixel by pixel, from the byte stream of a pseudo-terminal to the glyph cache on a GPU —
+        and what every developer should know about the surface they stare at all day.
+      </div>
+      <div class="dim" aria-hidden="true">
+        <span class="tick"></span>
+        <span class="line"></span>
+        <span class="label">4,210 words &nbsp;·&nbsp; 17 min read</span>
+        <span class="line"></span>
+        <span class="tick"></span>
+      </div>
+    </section>
+
+    <!-- ── article ── -->
+    <div class="article">
+      <div class="body">
+        <p>
+          Suppose you have an idea for a new way to render text. Perhaps you want shaped
+          ligatures, a font that breathes with your typing, or simply a faster path from a
+          keypress to a phosphor-warm pixel on screen. Whatever the motivation, you'll
+          quickly discover that what you call <a href="#" class="tx">"the terminal"</a> is
+          actually a stack of three or four programs in a trench coat, each pretending to
+          be a teletype from 1969<sup class="ref">1</sup>.
+        </p>
+        <p>
+          The terminal is a particularly good place to start a study of computation. It's
+          familiar ground, and the abstractions it offers — read a byte, write a byte, move
+          the cursor, change the color — have been remarkably stable for half a century.
+          Almost every change since then has been a layer added <em>around</em> these
+          primitives, not a replacement for them.
+        </p>
+
+        <h2 id="drawing-glyphs"><span class="num">§2.1</span>Principles of Drawing Glyphs</h2>
+        <p>
+          At the core of terminal rendering is a loop that turns bytes into rectangles of
+          pixels. The bytes arrive over a pseudo-terminal device; they are parsed by a
+          state machine that recognizes escape sequences; the parsed instructions update
+          an in-memory grid of cells; and finally a renderer walks that grid and asks the
+          GPU<sup class="ref">2</sup> to draw a glyph at each cell.
+        </p>
+        <p>
+          Each of those four stages hides a small universe of decisions. The parser must
+          handle malformed input from forty years of compatibility hacks. The grid must
+          track not only what character lives in each cell, but its color, its weight, its
+          underline, whether it is part of a wide CJK glyph, and whether the cursor
+          currently sits on top of it.
+        </p>
+      </div>
+
+      <aside class="sidenotes">
+        <div class="sidenote">
+          <span class="num">1</span>The DEC VT100, released in 1978, is still the lingua
+          franca. Your iTerm2 negotiates as <code>xterm-256color</code> — itself a fiction
+          wrapped around a fiction.
+        </div>
+        <div class="sidenote">
+          <span class="num">2</span>Or the CPU, if you're on a remote tty. The fastest
+          terminals today (Alacritty, Ghostty, Wezterm) all upload glyphs as textures and
+          draw with a single fragment shader.
+        </div>
+      </aside>
+    </div>
+
+    <!-- ── frame / figure ── -->
+    <figure class="frame">
+      <span class="label">FIG. 01 — THE RENDER LOOP</span>
+<pre>   pty ──▶ parser ──▶ grid ──▶ renderer ──▶ gpu
+            │          │          │
+          escape     cells      glyph
+        sequences  (char +      cache
+                    attrs)
+</pre>
+      <figcaption>The four stages a byte travels before it becomes a pixel.</figcaption>
+    </figure>
+
+    <!-- ── pagination ── -->
+    <nav class="pagination">
+      <a class="left">‹ prev &nbsp;·&nbsp; §01 — what is a shader</a>
+      <a class="center" href="#">index</a>
+      <a class="right" href="#">next &nbsp;·&nbsp; §03 — the gpu pipeline ›</a>
+    </nav>
+
+    <!-- ── vertical edge label ── -->
+    <div class="edge-label">PROJECT 01 — DEEPDIVE / TERMINALS</div>
+
+  </main>
+
+  <script type="module" src="./scripts/page.js"></script>
+</body>
+</html>

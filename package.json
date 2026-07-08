@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "build": "node site/build.mjs",
+    "serve": "node site/server.mjs",
+    "dev": "npm run build && npm run serve"
+  }
+}

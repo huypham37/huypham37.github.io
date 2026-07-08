@@ -1,0 +1,25 @@
+/* ─── responsive ─────────────────────────────────────── */
+/* Below this width there is no room for the floating instruments, so we drop
+   the chrome and show only the sheet. Navigation falls back to the bottom
+   pagination. */
+@media (max-width: 1270px) {
+  body {
+    display: block;
+    padding: 24px 20px 96px;
+  }
+  .writing-sidebar,
+  .page-toc {
+    display: none;
+  }
+  .sheet { margin: 0 auto; }
+}
+@media (max-width: 800px) {
+  .sheet { padding: 40px 28px 64px; }
+  .title-block h1 { font-size: var(--fs-title); }
+  .article { grid-template-columns: 1fr; }
+  .sidenotes { margin-top: 24px; }
+  .edge-label { display: none; }
+}
+@media (max-width: 640px) {
+  body { padding: 18px 16px 72px; }
+}

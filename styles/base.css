@@ -1,0 +1,65 @@
+@font-face {
+  font-family: "Arizona Test";
+  src: url("https://www.makingsoftware.com/_next/static/media/d67da450e4b24daa-s.p.woff2") format("woff2");
+  font-display: swap;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Arizona Test";
+  src: url("https://www.makingsoftware.com/_next/static/media/0ad8e1830bc58fbc-s.p.woff2") format("woff2");
+  font-display: swap;
+  font-style: italic;
+  font-weight: 400;
+}
+
+/* ─── tokens ──────────────────────────────────────────── */
+:root {
+  --desk:           #FFFFFF;
+  --paper:          #FFFFFF;
+  --ink:            #111111;
+  --ink-soft:       #45433E;
+  --hairline:       #D8D4CA;
+  --hairline-strong:#8E897C;
+  --blue:           #003153;  /* Prussian Blue — blueprint accent */
+
+  --writing: ui-serif, "New York", Charter, Georgia, serif;
+  --mono:    'IBM Plex Mono', ui-monospace, monospace;
+  --logo:    'Archivo Black', "Arial Black", Impact, sans-serif;
+
+  /* ── type scale (4 roles: size + line-height) ──
+     title → h1
+     heading → h2, logo
+     body → paragraphs, root, subtitle
+     small → everything else (notes, captions, code, labels, chrome, refs) */
+  --fs-title:   44px;  --lh-title:   1.05;
+  --fs-heading: 22px;  --lh-heading: 1.35;
+  --fs-body:    12px;  --lh-body:    26px;
+  --fs-small:   12px;  --lh-small:   18px;
+
+  --line: 26px;
+  --col: 56ch;
+  --measure: 80ch;      /* reading column width (text) */
+  --img-measure: 100ch; /* image width, centered on the sheet */
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background: var(--desk);
+  color: var(--ink);
+  font-family: var(--writing);
+  font-size: var(--fs-body);
+  line-height: var(--line);
+  font-feature-settings: "kern", "liga";
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  min-height: 100vh;
+  padding: 80px 24px 120px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
