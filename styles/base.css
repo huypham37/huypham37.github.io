@@ -35,8 +35,8 @@
      small → everything else (notes, captions, code, labels, chrome, refs) */
   --fs-title:   44px;  --lh-title:   1.05;
   --fs-heading: 22px;  --lh-heading: 1.35;
-  --fs-body:    12px;  --lh-body:    26px;
-  --fs-small:   12px;  --lh-small:   18px;
+  --fs-body:    14px;  --lh-body:    26px;
+  --fs-small:   14px;  --lh-small:   18px;
 
   --line: 26px;
   --col: 56ch;

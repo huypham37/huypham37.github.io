@@ -4,6 +4,12 @@ description: Why AI Won't Replace Software Engineers
 date: "2025-11-28T00:00:00Z"
 draft: false
 ---
+---
+title: "The Rise of DIY Software"
+description: Why AI Won't Replace Software Engineers
+date: "2025-11-28T00:00:00Z"
+draft: false
+---
 
 
 ### The Question Everyone's Asking

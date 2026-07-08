@@ -258,6 +258,12 @@ class Site {
   <link rel="stylesheet" href="${prefix}styles/page.css" />
 </head>
 <body>
+  <svg class="page-mark" width="21" height="21" viewBox="0 0 30 30" fill="none" aria-hidden="true">
+    <circle cx="15" cy="15" r="14" stroke="currentColor"/>
+    <line x1="7" y1="11" x2="23" y2="11" stroke="currentColor"/>
+    <line x1="7" y1="15" x2="23" y2="15" stroke="currentColor"/>
+    <line x1="7" y1="19" x2="19" y2="19" stroke="currentColor"/>
+  </svg>
   ${this.sidebar(data.currentUrl, prefix)}
   <nav class="page-toc" data-page-toc aria-label="On this page"></nav>
   <main class="sheet">
@@ -387,7 +393,9 @@ function sectionIndex(section) {
 }
 
 function comparePages(a, b) {
-  return sectionIndex(a.section) - sectionIndex(b.section) || a.slug.localeCompare(b.slug);
+  return sectionIndex(a.section) - sectionIndex(b.section) ||
+    (Number(a.meta.order) || 0) - (Number(b.meta.order) || 0) ||
+    a.slug.localeCompare(b.slug);
 }
 
 function wordCount(html) {

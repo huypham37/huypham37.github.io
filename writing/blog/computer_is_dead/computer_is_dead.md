@@ -3,6 +3,11 @@ title: "Computer Science Is Dead. Again."
 date: "2025-12-03T00:00:00Z"
 draft: false
 ---
+---
+title: "Computer Science Is Dead. Again."
+date: "2025-12-03T00:00:00Z"
+draft: false
+---
 
 ### The Death Announcement Cycle
 

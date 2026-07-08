@@ -234,6 +234,24 @@
   text-align: center;
 }
 
+/* ─── page mark ──────────────────────────────────────── */
+.page-mark {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  width: 21px;
+  height: 21px;
+  color: var(--hairline-strong);
+  pointer-events: none;
+  z-index: 50;
+}
+
+.page-mark circle,
+.page-mark line {
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+}
+
 /* ─── edge label ─────────────────────────────────────── */
 .edge-label {
   position: absolute;
