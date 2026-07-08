@@ -244,6 +244,7 @@
   color: var(--hairline-strong);
   pointer-events: none;
   z-index: 50;
+  display: none;
 }
 
 .page-mark circle,

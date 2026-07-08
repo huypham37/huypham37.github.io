@@ -290,7 +290,6 @@ class Site {
   sidebar(currentUrl, prefix) {
     return `<aside class="writing-sidebar" aria-label="Site index">
     <a class="writing-sidebar__logo" href="${prefix}">reinvent<br>thewheel</a>
-    <div class="writing-sidebar__kicker">${sectionKicker}</div>
     <div class="writing-toc">
       ${Object.entries(this.groups()).map(([section, pages], index) => `
         <section class="toc-section" aria-labelledby="toc-${slugify(section)}">
