@@ -236,6 +236,7 @@
 
 /* ─── page mark ──────────────────────────────────────── */
 .page-mark {
+  display: none;
   position: fixed;
   top: 24px;
   right: 24px;
@@ -248,6 +249,12 @@
   padding: 0;
   cursor: pointer;
   transition: color .2s, background-color .2s;
+}
+
+@media (max-width: 1270px) {
+  .page-mark {
+    display: block;
+  }
 }
 
 .page-mark svg {
