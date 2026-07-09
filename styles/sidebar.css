@@ -9,6 +9,16 @@
   overflow: auto;
   padding-right: 18px;
   color: var(--ink-soft);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-20px);
+  transition: opacity .25s ease, transform .25s ease, visibility .25s;
+}
+
+.writing-sidebar.is-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
 }
 .writing-sidebar__logo {
   display: inline-block;

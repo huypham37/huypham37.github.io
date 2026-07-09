@@ -1,4 +1,4 @@
-import { animate, inView } from 'https://cdn.jsdelivr.net/npm/motion@11.11.17/+esm';
+import { animate, inView } from 'motion';
 
 export class PageMotion {
   mount() {

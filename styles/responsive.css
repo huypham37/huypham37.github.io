@@ -7,11 +7,14 @@
     display: block;
     padding: 24px 20px 96px;
   }
-  .writing-sidebar,
   .page-toc {
     display: none;
   }
   .sheet { margin: 0 auto; }
+  .writing-sidebar {
+    top: 64px;
+    left: 20px;
+  }
 }
 @media (max-width: 800px) {
   .sheet { padding: 40px 28px 64px; }
