@@ -1,41 +1,40 @@
-/* ─── on-page table of contents (right edge) ─────────── */
-/* Anchored to the viewport's right edge, like the left sidebar. Lists the
-   article's headings; the current section is full black, the rest fade to
-   30% opacity. */
+/* ─── on-page contents ────────────────────────────────── */
+/* A third grid column beside the article, sticky rather than fixed, so it
+   can never drift into the reading column. Hidden until the viewport is
+   wide enough to hold all three columns (see rail.css). */
 .page-toc {
-  position: fixed;
+  display: none;
+  position: sticky;
   top: 120px;
-  right: 40px;
-  z-index: 40;
-  width: 200px;
-  max-height: calc(100vh - 200px);
+  align-self: start;
   overflow: auto;
-  font-family: var(--mono);
-  font-size: var(--fs-small);
+  max-height: calc(100vh - 200px);
+  font-size: 12px;
   line-height: 1.4;
 }
+
 .page-toc ul {
   list-style: none;
-  margin: 0;
-  padding: 0;
-  border-left: 1px solid var(--hairline);
+  border-left: 1px solid var(--line);
 }
+
 .page-toc__item a {
   display: block;
   padding: 5px 0 5px 14px;
   margin-left: -1px;
   border-left: 1px solid transparent;
-  color: rgba(17, 17, 17, 0.3);     /* --ink at 30% */
+  color: color-mix(in srgb, var(--ink) 32%, transparent);
   text-decoration: none;
-  transition: color 160ms ease, border-color 160ms ease;
+  transition: color .16s ease, border-color .16s ease;
 }
-.page-toc__item--h3 a {
-  padding-left: 26px;                /* indent sub-headings */
-}
+
+.page-toc__item--h3 a { padding-left: 26px; }
+
 .page-toc__item a:hover {
-  color: rgba(17, 17, 17, 0.6);
+  color: color-mix(in srgb, var(--ink) 65%, transparent);
 }
+
 .page-toc__item a.is-active {
-  color: var(--ink);                 /* full black */
-  border-left-color: var(--blue);    /* accent marker for the active section */
+  color: var(--ink);
+  border-left-color: var(--accent);
 }

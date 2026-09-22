@@ -1,0 +1,26 @@
+export type PageMeta = Record<string, string>;
+
+export interface Page {
+  slug: string;
+  meta: PageMeta;
+  body: string;
+  section: string;
+  title: string;
+  url: string;
+}
+
+export interface Note {
+  num: number;
+  html: string;
+}
+
+export interface RenderedPage {
+  html: string;
+  notes: Note[];
+}
+
+export interface SectionConfig {
+  dir: string;
+  label: string;
+  blurb: string;
+}

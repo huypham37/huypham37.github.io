@@ -1,65 +1,124 @@
-@font-face {
-  font-family: "Arizona Test";
-  src: url("https://www.makingsoftware.com/_next/static/media/d67da450e4b24daa-s.p.woff2") format("woff2");
-  font-display: swap;
-  font-style: normal;
-  font-weight: 400;
-}
-
-@font-face {
-  font-family: "Arizona Test";
-  src: url("https://www.makingsoftware.com/_next/static/media/0ad8e1830bc58fbc-s.p.woff2") format("woff2");
-  font-display: swap;
-  font-style: italic;
-  font-weight: 400;
-}
-
 /* ─── tokens ──────────────────────────────────────────── */
+/* One value pair per colour instead of three duplicated blocks (light,
+   dark, "dark because the OS said so"). `color-scheme` is the only thing
+   the theme switch flips; light-dark() resolves the rest. */
 :root {
-  --desk:           #FFFFFF;
-  --paper:          #FFFFFF;
-  --ink:            #111111;
-  --ink-soft:       #45433E;
-  --hairline:       #D8D4CA;
-  --hairline-strong:#8E897C;
-  --blue:           #003153;  /* Prussian Blue — blueprint accent */
+  color-scheme: light dark;
 
-  --writing: ui-serif, "New York", Charter, Georgia, serif;
-  --mono:    'IBM Plex Mono', ui-monospace, monospace;
-  --logo:    'Archivo Black', "Arial Black", Impact, sans-serif;
+  --paper:       light-dark(#F7F5F0, #101417);
+  --ink:         light-dark(#172A3A, #C7D3DB);
+  --muted:       light-dark(#69747C, #87939C);
+  --line:        light-dark(#D9D4CB, #2B343A);
+  --accent:      light-dark(#B66D52, #C98267);
+  --accent-soft: light-dark(#D8A18B, #9E6956);
 
-  /* ── type scale (4 roles: size + line-height) ──
-     title → h1
-     heading → h2, logo
-     body → paragraphs, root, subtitle
-     small → everything else (notes, captions, code, labels, chrome, refs) */
-  --fs-title:   44px;  --lh-title:   1.05;
-  --fs-heading: 22px;  --lh-heading: 1.35;
-  --fs-body:    14px;  --lh-body:    26px;
-  --fs-small:   14px;  --lh-small:   18px;
+  --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+  --sans:  "Avenir Next", "Segoe UI", Inter, "Helvetica Neue", Arial, sans-serif;
+  --mono:  ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 
-  --line: 26px;
-  --col: 56ch;
-  --measure: 80ch;      /* reading column width (text) */
-  --img-measure: 100ch; /* image width, centered on the sheet */
+  /* ── layout ── */
+  --shell:    1180px;
+  --rail:     180px;
+  --gutter:   84px;
+  --measure:  760px;   /* reading column */
+  --toc:      200px;   /* right-edge table of contents */
+  --toc-min:  1400px;  /* viewport width at which the toc has room */
+
+  /* ── type scale ── */
+  --fs-display: clamp(54px, 7vw, 92px);
+  --fs-title:   clamp(36px, 4.6vw, 54px);
+  --fs-h2:      25px;
+  --fs-h3:      19px;
+  --fs-lead:    clamp(19px, 2.1vw, 26px);
+  --fs-body:    18px;
+  --fs-ui:      14px;
+  --fs-micro:   11px;
 }
 
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"]  { color-scheme: dark; }
 
-html, body {
-  background: var(--desk);
-  color: var(--ink);
-  font-family: var(--writing);
-  font-size: var(--fs-body);
-  line-height: var(--line);
-  font-feature-settings: "kern", "liga";
-  -webkit-font-smoothing: antialiased;
+
+/* ─── reset ───────────────────────────────────────────── */
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ─── page ────────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
+  /* anchor targets clear the top edge when jumped to */
+  scroll-padding-top: 40px;
 }
 
 body {
   min-height: 100vh;
-  padding: 80px 24px 120px;
-  display: flex;
-  justify-content: center;
-  position: relative;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: var(--fs-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "kern", "liga";
+  transition: background-color .28s ease, color .28s ease;
+}
+
+/* paper grain — one fixed paint layer, theme-aware */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .022;
+  background-image:
+    radial-gradient(circle at 20% 20%, var(--ink) .5px, transparent .6px),
+    radial-gradient(circle at 80% 60%, var(--ink) .5px, transparent .6px);
+  background-size: 22px 22px, 27px 27px;
+}
+
+a { color: inherit; }
+
+/* ─── focus ───────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ─── shared type atoms ───────────────────────────────── */
+.eyebrow,
+.meta {
+  font-size: var(--fs-micro);
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  color: var(--muted);
+}
+
+.rule {
+  height: 1px;
+  background: var(--line);
+  margin: 68px 0 34px;
+}
+
+/* ─── reveal (staggered entrance) ─────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: reveal .65s cubic-bezier(.2, .7, .2, 1) forwards;
+  animation-delay: calc(var(--i, 0) * 60ms);
+}
+
+@keyframes reveal {
+  to { opacity: 1; transform: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
 }
