@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Fragment } from 'react';
 import SiteShell from '@/components/SiteShell';
+import Footer from '@/components/Footer';
 import { getIntro, getPageGroups, renderPageBody } from '@/lib/content';
 import { site } from '@/lib/site';
 import { reveal } from '@/lib/reveal';
@@ -72,26 +73,7 @@ export default async function IndexPage() {
         </section>
       ))}
 
-      <footer className="foot reveal" style={reveal(4 + Object.keys(groups).length)}>
-        <span className="foot__brand">
-          <span className="foot__mark" role="img" aria-label={site.logoAlt} />
-          <span>© {new Date().getFullYear()} {site.name}</span>
-        </span>
-
-        <span className="foot__links">
-          {site.footerLinks.map(link => (
-            <a
-              key={link.label}
-              href={link.href}
-              {...('external' in link && link.external
-                ? { target: '_blank', rel: 'noreferrer' }
-                : {})}
-            >
-              {link.label}
-            </a>
-          ))}
-        </span>
-      </footer>
+      <Footer index={4 + Object.keys(groups).length} />
     </SiteShell>
   );
 }

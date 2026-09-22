@@ -1,0 +1,250 @@
+/* ─── recruiter sheet ─────────────────────────────────── */
+/* A drawing sheet rather than a card wall: one hairline-separated stack of
+   roles and projects, labelled in the same micro caps as the rest of the
+   chrome. The rules carry the structure, so nothing needs a border box. */
+
+.rec-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.rec-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 16px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  font-family: var(--mono);
+  font-size: var(--fs-micro);
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  text-decoration: none;
+  transition: border-color .18s ease, color .18s ease;
+}
+
+.rec-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ─── groups ──────────────────────────────────────────── */
+.rec-group { margin-top: 62px; }
+
+.rec-role,
+.rec-project {
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
+
+.rec-role:last-child,
+.rec-project:last-child { border-bottom: 1px solid var(--line); }
+
+/* ─── role ────────────────────────────────────────────── */
+.rec-role__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 46px;
+  column-gap: 22px;
+  align-items: start;
+}
+
+.rec-company {
+  margin-bottom: 8px;
+  font-size: var(--fs-micro);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  color: var(--accent);
+}
+
+.rec-title {
+  font-family: var(--serif);
+  font-size: var(--fs-h2);
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -.02em;
+}
+
+.rec-duration {
+  margin-top: 7px;
+  font-size: var(--fs-micro);
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--muted);
+}
+
+/* Stands in for a logo plate: a measured square, not an image. */
+.rec-mark {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .06em;
+  color: var(--muted);
+}
+
+.rec-summary {
+  margin-top: 18px;
+  max-width: 620px;
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.62;
+}
+
+/* ─── highlights ──────────────────────────────────────── */
+.rec-highlights {
+  list-style: none;
+  margin-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.rec-highlights li {
+  position: relative;
+  padding: 11px 0 11px 20px;
+  border-bottom: 1px solid var(--line);
+  font-size: var(--fs-ui);
+  line-height: 1.55;
+}
+
+.rec-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20px;
+  width: 7px;
+  height: 1px;
+  background: var(--accent);
+}
+
+/* ─── selected work ───────────────────────────────────── */
+.rec-selected { margin-top: 22px; }
+
+.rec-label {
+  margin-bottom: 10px;
+  font-size: var(--fs-micro);
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  color: var(--muted);
+}
+
+.rec-selected__row {
+  display: grid;
+  grid-template-columns: 170px minmax(0, 1fr);
+  column-gap: 18px;
+  row-gap: 4px;
+  padding: 11px 0;
+  border-top: 1px solid var(--line);
+}
+
+.rec-selected__row strong {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.rec-selected__row span {
+  color: var(--muted);
+  font-size: var(--fs-ui);
+  line-height: 1.5;
+}
+
+/* ─── tech ────────────────────────────────────────────── */
+.rec-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.rec-chip {
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  font-family: var(--mono);
+  font-size: var(--fs-micro);
+  color: var(--muted);
+}
+
+/* ─── project ─────────────────────────────────────────── */
+.rec-project {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr) 46px;
+  column-gap: 22px;
+  row-gap: 18px;
+}
+
+.rec-project__meta {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.rec-project__type {
+  font-size: var(--fs-micro);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  color: var(--accent);
+}
+
+.rec-project__body {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.rec-project > .rec-mark {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+.rec-project__body .rec-summary { margin-top: 12px; }
+
+.rec-project__link {
+  display: inline-block;
+  margin-top: 14px;
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--accent-soft);
+  font-family: var(--mono);
+  font-size: var(--fs-micro);
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.rec-project__link:hover { border-bottom-color: var(--accent); }
+
+.rec-project .rec-tech {
+  grid-column: 2;
+  grid-row: 2;
+  margin-top: 0;
+}
+
+/* ─── narrow ──────────────────────────────────────────── */
+@media (max-width: 760px) {
+  .rec-role__head { grid-template-columns: minmax(0, 1fr) 40px; column-gap: 14px; }
+  .rec-mark { width: 40px; height: 40px; }
+
+  .rec-selected__row { grid-template-columns: minmax(0, 1fr); }
+
+  .rec-project { grid-template-columns: minmax(0, 1fr) 40px; }
+
+  /* Named, not `.rec-project > *`: the `.rec-project .rec-tech` placement
+     above is two classes deep and would otherwise outrank a universal. */
+  .rec-project__meta,
+  .rec-project__body,
+  .rec-project .rec-tech {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .rec-project > .rec-mark {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
