@@ -6,6 +6,7 @@
 .rec-actions {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: 10px;
   margin-top: 30px;
 }
@@ -28,6 +29,46 @@
 .rec-button:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+/* ─── language ────────────────────────────────────────── */
+/* Two settings on a dial, not a segmented control: the active one is marked
+   by the accent underline, the same signal the rail uses for the current
+   section. */
+.rec-lang {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+
+.rec-lang__label {
+  margin-right: 8px;
+  font-size: var(--fs-micro);
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  color: var(--muted);
+}
+
+.rec-lang__option {
+  padding: 2px 4px;
+  border: 0;
+  border-bottom: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: var(--fs-micro);
+  text-transform: uppercase;
+  letter-spacing: .13em;
+  color: var(--muted);
+  transition: color .18s ease, border-color .18s ease;
+}
+
+.rec-lang__option:hover { color: var(--ink); }
+
+.rec-lang__option[aria-pressed="true"] {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 /* ─── groups ──────────────────────────────────────────── */
