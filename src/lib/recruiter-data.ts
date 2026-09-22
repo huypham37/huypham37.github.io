@@ -1,3 +1,4 @@
+import { existsSync } from 'node:fs';
 import { readFile } from 'node:fs/promises';
 import path from 'node:path';
 import { parse } from 'yaml';
@@ -74,12 +75,31 @@ function asOptionalString(file: string, value: unknown, where: string): string |
   return value === undefined || value === null ? undefined : asString(file, value, where);
 }
 
+/**
+ * A logo is referenced by URL, so it has to live in the directory the static
+ * export serves (public/). Catching a wrong path here beats shipping a broken
+ * image tag.
+ */
+function asLogo(file: string, value: unknown, where: string): string | undefined {
+  const href = asOptionalString(file, value, where);
+  if (!href) return undefined;
+
+  if (!href.startsWith('/')) {
+    fail(file, where, `a path from the site root, got "${href}"`);
+  }
+  if (!existsSync(path.join(process.cwd(), 'public', href))) {
+    fail(file, where, `public${href} to exist`);
+  }
+  return href;
+}
+
 function role(file: string, raw: unknown, index: number): Record<Locale, Role> {
   const where = `role ${index + 1}`;
   const source = asObject(file, raw, where);
 
   const company = asString(file, source.company, `${where}.company`);
   const mark = asString(file, source.mark, `${where}.mark`);
+  const logo = asLogo(file, source.logo, `${where}.logo`);
   const title = asText(file, source.title, `${where}.title`);
   const duration = asText(file, source.duration, `${where}.duration`);
   const summary = asText(file, source.summary, `${where}.summary`);
@@ -100,6 +120,7 @@ function role(file: string, raw: unknown, index: number): Record<Locale, Role> {
   return both(locale => ({
     company,
     mark,
+    logo,
     tech,
     title: title[locale],
     duration: duration[locale],

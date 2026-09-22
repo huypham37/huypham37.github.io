@@ -8,11 +8,23 @@
 # Keep both languages on adjacent lines like the examples below — it is much
 # easier to spot a missing translation than if they lived in separate files.
 #
-# `mark` is the two-character plate that stands in for a company logo.
+# `mark` is the two-character plate that stands in for a company logo, used
+# when no real logo is given. `logo` is optional and must point at a file under
+# public/, because that is the only directory the static export serves:
+#
+#   logo: /company-logo/acme.webp      serves public/company-logo/acme.webp
+#
+# Trim a logo to its own bounds before dropping it in. Logos that ship on a
+# large transparent or white canvas render tiny, because `contain` fits the
+# whole canvas, not the artwork inside it:
+#
+#   sharp(p).trim({ threshold: 5 }).toFile(p)
+#
 # A missing or malformed field fails the build with the file and index named.
 
-- company: Philip Morris International
+- company: Pie Medical Imaging
   mark: PMI
+  logo: /company-logo/pmi-logo.webp
   title:
     en: Software Engineer
     nl: Software Engineer

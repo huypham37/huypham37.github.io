@@ -25,6 +25,8 @@ export interface Role {
   duration: string;
   /** Two-letter plate standing in for a logo, as on a drawing title block. */
   mark: string;
+  /** URL of a real logo, served from public/. Falls back to `mark`. */
+  logo?: string;
   summary: string;
   highlights: string[];
   selected?: SelectedWork[];

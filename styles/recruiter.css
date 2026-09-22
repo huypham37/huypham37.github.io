@@ -84,9 +84,11 @@
 .rec-project:last-child { border-bottom: 1px solid var(--line); }
 
 /* ─── role ────────────────────────────────────────────── */
+/* The plate column sizes to its content: a text mark is a square, a real
+   logo is usually a wide wordmark and needs the room. */
 .rec-role__head {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 46px;
+  grid-template-columns: minmax(0, 1fr) auto;
   column-gap: 22px;
   align-items: start;
 }
@@ -122,12 +124,28 @@
   place-items: center;
   width: 46px;
   height: 46px;
+  overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 2px;
   font-family: var(--mono);
   font-size: 11px;
   letter-spacing: .06em;
   color: var(--muted);
+}
+
+/* A real logo fills the plate. Shipped logos are trimmed to their own
+   bounds, so `contain` never crops and no padding is baked into the
+   artwork — see the note in content/work-experience.yaml. */
+.rec-mark--logo {
+  width: 104px;
+  height: 46px;
+}
+
+.rec-mark img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .rec-summary {
@@ -268,8 +286,9 @@
 
 /* ─── narrow ──────────────────────────────────────────── */
 @media (max-width: 760px) {
-  .rec-role__head { grid-template-columns: minmax(0, 1fr) 40px; column-gap: 14px; }
+  .rec-role__head { grid-template-columns: minmax(0, 1fr) auto; column-gap: 14px; }
   .rec-mark { width: 40px; height: 40px; }
+  .rec-mark--logo { width: 88px; height: 40px; }
 
   .rec-selected__row { grid-template-columns: minmax(0, 1fr); }
 

@@ -72,7 +72,13 @@ export default function RecruiterSheet({ sheets, contact }: RecruiterSheetProps)
                 <h3 className="rec-title">{role.title}</h3>
                 <p className="rec-duration">{role.duration}</p>
               </div>
-              <span className="rec-mark" aria-hidden="true">{role.mark}</span>
+              {/* Decorative: the company name is the text right beside it. */}
+              <span
+                className={role.logo ? 'rec-mark rec-mark--logo' : 'rec-mark'}
+                aria-hidden="true"
+              >
+                {role.logo ? <img src={role.logo} alt="" /> : role.mark}
+              </span>
             </div>
 
             <p className="rec-summary">{role.summary}</p>
