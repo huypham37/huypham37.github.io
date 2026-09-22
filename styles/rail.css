@@ -1,0 +1,159 @@
+/* ─── shell ───────────────────────────────────────────── */
+/* Two columns: the rail and the reading column. A third column for the
+   on-page contents appears only when there is genuinely room for it. */
+.shell {
+  position: relative;
+  z-index: 1;
+  width: min(var(--shell), calc(100% - 48px));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: var(--rail) minmax(0, 1fr);
+  column-gap: var(--gutter);
+  padding: 72px 0 56px;
+}
+
+main {
+  max-width: var(--measure);
+  padding-top: 108px;
+  min-width: 0;
+}
+
+@media (min-width: 1400px) {
+  .shell { width: min(1320px, calc(100% - 48px)); }
+
+  .shell--toc {
+    grid-template-columns: var(--rail) minmax(0, 1fr) var(--toc);
+  }
+  .shell--toc > .page-toc { display: block; }
+}
+
+/* ─── rail ────────────────────────────────────────────── */
+.rail {
+  position: sticky;
+  top: 56px;
+  align-self: start;
+  min-height: calc(100vh - 112px);
+  display: flex;
+  flex-direction: column;
+}
+
+.rail__mark {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+}
+
+.rail__logo {
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  transition: transform .25s ease;
+}
+
+.rail__mark:hover .rail__logo { transform: translateY(-1px); }
+
+/* The mark is a mask, not an <img>, so it inherits the theme ink exactly
+   instead of rendering as a dark plate in dark mode. */
+.logo-mark {
+  width: 42px;
+  height: 42px;
+  background-color: var(--ink);
+  -webkit-mask: url("/logo-mark.png") center / contain no-repeat;
+  mask: url("/logo-mark.png") center / contain no-repeat;
+}
+
+/* ─── rail nav ────────────────────────────────────────── */
+.rail__nav {
+  margin-top: 82px;
+  display: flex;
+  flex-direction: column;
+}
+
+.rail__nav a {
+  padding: 6px 0;
+  width: max-content;
+  color: var(--muted);
+  font-size: var(--fs-ui);
+  text-decoration: none;
+  transition: color .18s ease, transform .18s ease;
+}
+
+.rail__nav a:hover {
+  color: var(--ink);
+  transform: translateX(3px);
+}
+
+.rail__nav a[aria-current] {
+  color: var(--accent);
+}
+
+.rail__nav a[aria-current]::before {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  margin-right: 9px;
+  border-radius: 50%;
+  background: var(--accent);
+  vertical-align: 2px;
+}
+
+/* ─── rail foot ───────────────────────────────────────── */
+.rail__foot {
+  /* pushes the switch to the bottom of the rail without dragging the nav
+     down with it */
+  margin-top: auto;
+  padding-top: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.theme-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: var(--muted);
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: .04em;
+}
+
+.theme-switch__track {
+  position: relative;
+  width: 34px;
+  height: 18px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: border-color .2s ease;
+}
+
+.theme-switch__thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--ink);
+  transition: transform .2s ease, background-color .2s ease;
+}
+
+.theme-switch:hover .theme-switch__track { border-color: var(--accent); }
+
+/* Driven by the document's color-scheme, so the control is visually correct
+   on first paint — before React has hydrated. */
+:root[data-theme="dark"] .theme-switch__thumb { transform: translateX(16px); }

@@ -5,6 +5,7 @@ import { slugify, titleCase, unquote } from './utils';
 import type { Page, PageMeta, SectionConfig } from './types';
 
 const contentDir = path.join(process.cwd(), 'writing');
+const introFile = path.join(process.cwd(), 'content', 'intro.md');
 
 export const sections: SectionConfig[] = [
   { dir: 'random', label: 'Random thought', blurb: 'Random thoughts about technology.' },
@@ -58,17 +59,30 @@ function toSlug(file: string): string {
   return relative.split(path.sep).map(part => slugify(part)).join('/');
 }
 
+/**
+ * A leading `# Title` is the article's title, not body copy — the page
+ * template already renders the title as the <h1>. Pulling it out here also
+ * means the document gets a properly cased title instead of one derived from
+ * the filename.
+ */
+function extractLeadingTitle(body: string): { title?: string; body: string } {
+  const match = body.match(/^#\s+(.+?)[ \t]*(?:\n|$)/);
+  if (!match) return { body };
+  return { title: match[1].trim(), body: body.slice(match[0].length).trim() };
+}
+
 function createPage(file: string, source: string): Page {
   const parsed = parseFrontmatter(source);
   const slug = toSlug(file);
+  const heading = extractLeadingTitle(parsed.body);
 
   return {
     file,
     slug,
     meta: parsed.meta,
-    body: parsed.body,
+    body: heading.body,
     section: parsed.meta.section || sectionLabel(slug.split('/')[0]),
-    title: parsed.meta.title || titleCase(path.basename(slug)),
+    title: parsed.meta.title || heading.title || titleCase(path.basename(slug)),
     url: `/${slug}/`,
     sourceDir: path.dirname(file)
   };
@@ -87,13 +101,20 @@ async function allFiles(dir: string): Promise<string[]> {
   return result;
 }
 
+/** Homepage introduction. Kept separate from article content on purpose. */
+export async function getIntro(): Promise<string> {
+  return readFile(introFile, 'utf8');
+}
+
 export async function getPages(): Promise<Page[]> {
   const filePaths = await allFiles(contentDir);
   const pages: Page[] = [];
 
   for (const file of filePaths) {
     const source = await readFile(file, 'utf8');
-    pages.push(createPage(file, source));
+    const page = createPage(file, source);
+    if (page.meta.draft === 'true') continue;
+    pages.push(page);
   }
 
   return pages.sort(comparePages);

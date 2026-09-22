@@ -1,26 +1,29 @@
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
+import { site } from '@/lib/site';
 import '../../styles/page.css';
 
 export const metadata: Metadata = {
-  title: 'reinventthewheel',
+  title: site.name,
   description: 'A quiet index for Random, Blog, Quark, and CS.'
 };
 
+/**
+ * Resolves the theme before first paint. Without this the document would
+ * render light for a frame and then snap to dark.
+ *
+ * The choice lives on `data-theme`; the palette itself is declared once in
+ * base.css via light-dark(), so nothing else has to know the values.
+ */
+const themeBoot = `try{var s=localStorage.getItem('theme');var d=s?s==='dark':matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.dataset.theme=d?'dark':'light'}catch(e){}`;
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
-          rel="stylesheet"
-        />
+        <script dangerouslySetInnerHTML={{ __html: themeBoot }} />
       </head>
-      <body>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

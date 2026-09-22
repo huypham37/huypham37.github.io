@@ -1,12 +1,12 @@
 import { notFound } from 'next/navigation';
 import type { Metadata } from 'next';
-import PageShell from '@/components/PageShell';
-import Sheet from '@/components/Sheet';
-import TitleBlock from '@/components/TitleBlock';
+import SiteShell from '@/components/SiteShell';
+import PageHead from '@/components/PageHead';
 import Article from '@/components/Article';
 import Pagination from '@/components/Pagination';
 import ClientScripts from '@/components/ClientScripts';
 import { getPages, getPageBySlug, getPageGroups, renderPageBody } from '@/lib/content';
+import { site } from '@/lib/site';
 import type { Page } from '@/lib/types';
 
 interface ArticlePageProps {
@@ -22,15 +22,14 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: ArticlePageProps): Promise<Metadata> {
   const { slug } = await params;
-  const pageSlug = slug.join('/');
-  const page = await getPageBySlug(pageSlug);
+  const page = await getPageBySlug(slug.join('/'));
 
   if (!page) {
-    return { title: 'Not found — reinventthewheel' };
+    return { title: 'Not found' };
   }
 
   return {
-    title: `${page.title} — reinventthewheel`,
+    title: `${page.title} — ${site.name}`,
     description: page.meta.description || ''
   };
 }
@@ -45,8 +44,7 @@ function findNeighbors(pages: Page[], current: Page) {
 
 export default async function ArticlePage({ params }: ArticlePageProps) {
   const { slug } = await params;
-  const pageSlug = slug.join('/');
-  const page = await getPageBySlug(pageSlug);
+  const page = await getPageBySlug(slug.join('/'));
 
   if (!page) {
     notFound();
@@ -57,17 +55,19 @@ export default async function ArticlePage({ params }: ArticlePageProps) {
   const rendered = renderPageBody(page.body);
 
   return (
-    <PageShell groups={groups} currentUrl={page.url}>
-      <Sheet>
-        <TitleBlock
+    <SiteShell groups={groups} currentUrl={page.url} toc>
+      <article>
+        <PageHead
+          section={page.section}
           title={page.title}
           description={page.meta.description}
-          body={rendered.html}
+          body={page.body}
         />
+        <div className="rule" />
         <Article html={rendered.html} notes={rendered.notes} />
         <Pagination prev={prev} next={next} />
-      </Sheet>
+      </article>
       <ClientScripts />
-    </PageShell>
+    </SiteShell>
   );
 }

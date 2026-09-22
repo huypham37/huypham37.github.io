@@ -3,3 +3,5 @@ dist/
 .quark/
 node_modules/
 .DS_Store
+tsconfig.tsbuildinfo
+*.tsbuildinfo

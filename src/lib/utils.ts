@@ -24,3 +24,11 @@ export function titleCase(value: string): string {
 export function wordCount(html: string): number {
   return html.replace(/<[^>]+>/g, ' ').trim().split(/\s+/).filter(Boolean).length;
 }
+
+const WORDS_PER_MINUTE = 230;
+
+/** Estimated reading time in whole minutes, never less than 1. */
+export function readTime(value: string): number {
+  return Math.max(1, Math.round(wordCount(value) / WORDS_PER_MINUTE));
+}
+
