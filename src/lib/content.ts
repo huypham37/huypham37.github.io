@@ -77,14 +77,12 @@ function createPage(file: string, source: string): Page {
   const heading = extractLeadingTitle(parsed.body);
 
   return {
-    file,
     slug,
     meta: parsed.meta,
     body: heading.body,
     section: parsed.meta.section || sectionLabel(slug.split('/')[0]),
     title: parsed.meta.title || heading.title || titleCase(path.basename(slug)),
-    url: `/${slug}/`,
-    sourceDir: path.dirname(file)
+    url: `/${slug}/`
   };
 }
 

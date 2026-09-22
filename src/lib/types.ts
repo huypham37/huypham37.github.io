@@ -1,14 +1,12 @@
 export type PageMeta = Record<string, string>;
 
 export interface Page {
-  file: string;
   slug: string;
   meta: PageMeta;
   body: string;
   section: string;
   title: string;
   url: string;
-  sourceDir: string;
 }
 
 export interface Note {

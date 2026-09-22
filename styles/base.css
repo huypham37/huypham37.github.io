@@ -89,8 +89,7 @@ a { color: inherit; }
 
 /* ─── shared type atoms ───────────────────────────────── */
 .eyebrow,
-.meta,
-.view {
+.meta {
   font-size: var(--fs-micro);
   text-transform: uppercase;
   letter-spacing: .13em;
