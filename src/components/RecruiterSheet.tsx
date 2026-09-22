@@ -1,22 +1,26 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { recruiter, locales, type Locale } from '@/lib/recruiter';
+import { locales, type Locale, type Sheet } from '@/lib/recruiter';
 import { reveal } from '@/lib/reveal';
 
 interface RecruiterSheetProps {
+  /** Both locales of the sheet, parsed from content/*.yaml on the server. */
+  sheets: Record<Locale, Sheet>;
   /** mailto: target for the contact affordance, resolved on the server. */
   contact: string;
 }
 
 /**
  * The sheet is the one part of the site that ships in two languages, so it is
- * the one client component. `en` is the default on the server too, so the
- * exported HTML carries real content and crawlers see English.
+ * the one client component. It receives both locales as props rather than
+ * importing them, because the loader reads from disk and could never run in a
+ * browser. `en` is the default on the server too, so the exported HTML carries
+ * real content and crawlers see English.
  */
-export default function RecruiterSheet({ contact }: RecruiterSheetProps) {
+export default function RecruiterSheet({ sheets, contact }: RecruiterSheetProps) {
   const [locale, setLocale] = useState<Locale>('en');
-  const copy = recruiter[locale];
+  const copy = sheets[locale];
 
   // Keep the document language honest for screen readers and hyphenation.
   useEffect(() => {

@@ -1,0 +1,67 @@
+# Work experience shown on /for-recruiter/.
+#
+# One entry per role, newest first. Fields come in two flavours:
+#
+#   plain     company, mark, tech        written once
+#   localized a map of { en, nl }        same field, two languages
+#
+# Keep both languages on adjacent lines like the examples below — it is much
+# easier to spot a missing translation than if they lived in separate files.
+#
+# `mark` is the two-character plate that stands in for a company logo.
+# A missing or malformed field fails the build with the file and index named.
+
+- company: Philip Morris International
+  mark: PMI
+  title:
+    en: Software Engineer
+    nl: Software Engineer
+  duration:
+    en: Recent role
+    nl: Recente rol
+  summary:
+    en: Worked on software and infrastructure for internal AI systems, with a focus on reliable deployment, automation, and developer-facing tooling.
+    nl: Werkte aan software en infrastructuur voor interne AI-systemen, met de nadruk op betrouwbare deployment, automatisering en tooling voor ontwikkelaars.
+  highlights:
+    - en: Built and deployed Kubernetes-based infrastructure for an internal LLM system.
+      nl: Bouwde en deployde Kubernetes-infrastructuur voor een intern LLM-systeem.
+    - en: Automated infrastructure setup and application delivery using Terraform and Helm.
+      nl: Automatiseerde infrastructuur en applicatie-uitrol met Terraform en Helm.
+    - en: Worked with observability and monitoring using Prometheus.
+      nl: Werkte aan observability en monitoring met Prometheus.
+    - en: Used CI/CD as part of the daily development and deployment workflow.
+      nl: Gebruikte CI/CD als vast onderdeel van de dagelijkse ontwikkel- en deploymentworkflow.
+  selected:
+    - name:
+        en: Internal LLM Platform
+        nl: Intern LLM-platform
+      detail:
+        en: Infrastructure for running local models and agent workflows for internal use.
+        nl: Infrastructuur om lokale modellen en agent-workflows intern te draaien.
+    - name:
+        en: Platform Automation
+        nl: Platformautomatisering
+      detail:
+        en: Repeatable infrastructure and deployment workflows for application environments.
+        nl: Herhaalbare infrastructuur en deploymentworkflows voor applicatieomgevingen.
+  tech: [Kubernetes, Terraform, Helm, Prometheus, CI/CD]
+
+- company: Previous experience
+  mark: CO
+  title:
+    en: Software Developer
+    nl: Software Developer
+  duration:
+    en: Earlier role
+    nl: Eerdere rol
+  summary:
+    en: Built application features, internal tooling, and supporting services across software projects with a strong focus on practical delivery.
+    nl: Bouwde applicatiefunctionaliteit, interne tooling en ondersteunende services binnen softwareprojecten, met veel aandacht voor praktische oplevering.
+  highlights:
+    - en: Implemented application features end-to-end.
+      nl: Implementeerde applicatiefunctionaliteit van begin tot eind.
+    - en: Worked across backend, frontend, deployment, and automation tasks.
+      nl: Werkte aan backend, frontend, deployment en automatisering.
+    - en: Collaborated through Git-based development and CI workflows.
+      nl: Werkte samen via Git-gebaseerde ontwikkeling en CI-workflows.
+  tech: [TypeScript, JavaScript, Docker, Git]

@@ -1,0 +1,52 @@
+# Projects shown on /for-recruiter/.
+#
+# Same field conventions as work-experience.yaml: plain fields are written
+# once, localized fields are a { en, nl } map, both on adjacent lines.
+#
+# `href` is optional. Leave it out and the card simply drops its "view
+# project" link rather than pointing at a dead '#'.
+
+- type:
+    en: Personal project
+    nl: Persoonlijk project
+  name:
+    en: Quark — Coding Agent Orchestrator
+    nl: Quark — orchestrator voor coding agents
+  mark: Q
+  duration:
+    en: 2026 — now
+    nl: 2026 — nu
+  summary:
+    en: A native macOS application for orchestrating coding agents, projects, tasks, sessions, and sub-agents. Built around a native Swift interface and a separate agent runtime connected through local IPC.
+    nl: Een native macOS-applicatie voor het orkestreren van coding agents, projecten, taken, sessies en sub-agents. Gebouwd rond een native Swift-interface en een aparte agent-runtime die via lokale IPC is verbonden.
+  tech: [Swift, Go, Unix sockets, JSON, LLM agents]
+
+- type:
+    en: Infrastructure
+    nl: Infrastructuur
+  name:
+    en: Home Lab
+    nl: Homelab
+  mark: HL
+  duration:
+    en: Ongoing
+    nl: Doorlopend
+  summary:
+    en: A small self-hosted environment where I run services, experiment with Kubernetes, deployment patterns, networking, observability, and local AI workloads.
+    nl: Een kleine self-hosted omgeving waar ik services draai en experimenteer met Kubernetes, deploymentpatronen, netwerken, observability en lokale AI-workloads.
+  tech: [Kubernetes, k3s, Linux, Docker, Networking]
+
+- type:
+    en: Software
+    nl: Software
+  name:
+    en: CHUM
+    nl: CHUM
+  mark: C
+  duration:
+    en: Experimental
+    nl: Experimenteel
+  summary:
+    en: A minimal macOS text editor exploring a smaller, more focused editing environment with native-feeling interactions and a deliberately constrained feature set.
+    nl: Een minimale macOS-teksteditor die een kleinere, gerichtere werkomgeving verkent, met native aanvoelende interacties en een bewust beperkte set functies.
+  tech: [Rust, macOS, LSP]
