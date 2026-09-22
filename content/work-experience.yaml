@@ -31,54 +31,34 @@
   mark: PMI
   logo: /company-logo/pmi-logo.webp
   title:
-    en: Software Engineer
-    nl: Software Engineer
+    en: AI Solution Intern, Security Automation
+    nl: AI Solution Stagiair, Security Automation
   duration:
-    en: Recent role
-    nl: Recente rol
+    en: Sep 2025 – Aug 2026 · Maastricht, NL
+    nl: Sep 2025 – aug 2026 · Maastricht, NL
   summary:
-    en: Worked on software and infrastructure for internal AI systems, with a focus on reliable deployment, automation, and developer-facing tooling.
-    nl: Werkte aan software en infrastructuur voor interne AI-systemen, met de nadruk op betrouwbare deployment, automatisering en tooling voor ontwikkelaars.
+    en: Internship in security automation, building an in-house LLM platform and the backend services that make penetration-testing and test-generation workflows context-aware.
+    nl: Stage in security automation, met een intern LLM-platform en de backendservices die penetratietest- en testgeneratieworkflows contextbewust maken.
   highlights:
-    - en: Built and deployed Kubernetes-based infrastructure for an internal LLM system.
-      nl: Bouwde en deployde Kubernetes-infrastructuur voor een intern LLM-systeem.
-    - en: Automated infrastructure setup and application delivery using Terraform and Helm.
-      nl: Automatiseerde infrastructuur en applicatie-uitrol met Terraform en Helm.
-    - en: Worked with observability and monitoring using Prometheus.
-      nl: Werkte aan observability en monitoring met Prometheus.
-    - en: Used CI/CD as part of the daily development and deployment workflow.
-      nl: Gebruikte CI/CD als vast onderdeel van de dagelijkse ontwikkel- en deploymentworkflow.
+    - en: Built and deployed an in-house LLM system on Kubernetes for internal engineering use, integrating Quark as the agent framework with LM Studio for locally hosted models.
+      nl: Bouwde en deployde een intern LLM-systeem op Kubernetes voor intern engineeringgebruik, met Quark als agent-framework en LM Studio voor lokaal gehoste modellen.
+    - en: Ran the internal Kubernetes platform for in-house agentic workflows, using Terraform, Helm, Prometheus, and CI/CD.
+      nl: Beheerde het interne Kubernetes-platform voor in-house agentic workflows, met Terraform, Helm, Prometheus en CI/CD.
+    - en: Developed TypeScript backend services with PostgreSQL and Redis for context-aware penetration-testing and test-generation workflows.
+      nl: Ontwikkelde TypeScript-backendservices met PostgreSQL en Redis voor contextbewuste penetratietest- en testgeneratieworkflows.
+    - en: Built LLM-assisted threat-modeling tools that turned engineering documents into threat lists and mitigation work with STRIDE and MITRE ATT&CK, surfacing 27 extra security threats across two company products.
+      nl: Bouwde LLM-ondersteunde threat-modelingtools die engineeringdocumenten omzetten in dreigingslijsten en mitigatiewerk met STRIDE en MITRE ATT&CK, goed voor 27 extra gevonden beveiligingsdreigingen in twee producten van het bedrijf.
   selected:
     - name:
-        en: Internal LLM Platform
+        en: In-house LLM Platform
         nl: Intern LLM-platform
       detail:
-        en: Infrastructure for running local models and agent workflows for internal use.
-        nl: Infrastructuur om lokale modellen en agent-workflows intern te draaien.
+        en: Kubernetes platform serving locally hosted models through LM Studio, with Quark as the agent framework for internal agentic workflows.
+        nl: Kubernetes-platform dat lokaal gehoste modellen serveert via LM Studio, met Quark als agent-framework voor interne agentic workflows.
     - name:
-        en: Platform Automation
-        nl: Platformautomatisering
+        en: Threat-Modeling Tooling
+        nl: Threat-modelingtooling
       detail:
-        en: Repeatable infrastructure and deployment workflows for application environments.
-        nl: Herhaalbare infrastructuur en deploymentworkflows voor applicatieomgevingen.
-  tech: [Kubernetes, Terraform, Helm, Prometheus, CI/CD]
-
-- company: Previous experience
-  mark: CO
-  title:
-    en: Software Developer
-    nl: Software Developer
-  duration:
-    en: Earlier role
-    nl: Eerdere rol
-  summary:
-    en: Built application features, internal tooling, and supporting services across software projects with a strong focus on practical delivery.
-    nl: Bouwde applicatiefunctionaliteit, interne tooling en ondersteunende services binnen softwareprojecten, met veel aandacht voor praktische oplevering.
-  highlights:
-    - en: Implemented application features end-to-end.
-      nl: Implementeerde applicatiefunctionaliteit van begin tot eind.
-    - en: Worked across backend, frontend, deployment, and automation tasks.
-      nl: Werkte aan backend, frontend, deployment en automatisering.
-    - en: Collaborated through Git-based development and CI workflows.
-      nl: Werkte samen via Git-gebaseerde ontwikkeling en CI-workflows.
-  tech: [TypeScript, JavaScript, Docker, Git]
+        en: LLM-assisted tooling that reads engineering documents and produces STRIDE and MITRE ATT&CK threat lists plus mitigations.
+        nl: LLM-ondersteunde tooling die engineeringdocumenten leest en dreigingslijsten volgens STRIDE en MITRE ATT&CK plus mitigaties oplevert.
+  tech: [Kubernetes, Linux, Docker, ArgoCD, Terraform, Prometheus, Local LLM, TypeScript, PostgreSQL, Redis]
