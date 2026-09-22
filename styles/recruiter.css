@@ -133,12 +133,13 @@
   color: var(--muted);
 }
 
-/* A real logo fills the plate. Shipped logos are trimmed to their own
-   bounds, so `contain` never crops and no padding is baked into the
-   artwork — see the note in content/work-experience.yaml. */
+/* A real logo fills the plate, unframed — the artwork carries its own
+   weight, and a hairline around it reads as a stray box. The text marks
+   keep their border, because letters alone would float. */
 .rec-mark--logo {
   width: 104px;
   height: 46px;
+  border: 0;
 }
 
 .rec-mark img {

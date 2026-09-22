@@ -20,6 +20,11 @@
 #
 #   sharp(p).trim({ threshold: 5 }).toFile(p)
 #
+# Drop a solid white backdrop too, or it shows as a bright rectangle over the
+# paper and a white block in dark mode. Flood fill inwards from the edges, so
+# white enclosed inside the mark is left alone. See the commit that added
+# pmi-logo.webp for the exact two passes.
+#
 # A missing or malformed field fails the build with the file and index named.
 
 - company: Pie Medical Imaging
