@@ -10,16 +10,31 @@
     en: Personal project
     nl: Persoonlijk project
   name:
-    en: Quark — Coding Agent Orchestrator
-    nl: Quark — orchestrator voor coding agents
+    en: Quark — Coding Agent Harness
+    nl: Quark — harness voor coding agents
   mark: Q
   duration:
     en: 2026 — now
     nl: 2026 — nu
   summary:
-    en: A native macOS application for orchestrating coding agents, projects, tasks, sessions, and sub-agents. Built around a native Swift interface and a separate agent runtime connected through local IPC.
-    nl: Een native macOS-applicatie voor het orkestreren van coding agents, projecten, taken, sessies en sub-agents. Gebouwd rond een native Swift-interface en een aparte agent-runtime die via lokale IPC is verbonden.
-  tech: [Swift, Go, Unix sockets, JSON, LLM agents]
+    en: A tool-first agent for coding and research work. The model is pluggable, the harness is the product — it owns tool execution, memory, context management, and state, behind a streaming terminal UI with named subagents and session persistence.
+    nl: Een tool-first agent voor coding en research. Het model is verwisselbaar, de harness is het product — die bezit tooluitvoering, geheugen, contextbeheer en state, achter een streamende terminal-UI met benoemde subagents en sessieopslag.
+  tech: [TypeScript, Bun, SolidJS, OpenTUI, Multi-provider LLM, Docker, Helm]
+
+- type:
+    en: Personal project
+    nl: Persoonlijk project
+  name:
+    en: quari-orch — Agent Orchestrator for macOS
+    nl: quari-orch — agent-orchestrator voor macOS
+  mark: QO
+  duration:
+    en: 2026 — now
+    nl: 2026 — nu
+  summary:
+    en: A native macOS client that runs many agent tasks side by side instead of splitting terminal panes. Embedded terminals keep the process, and a Unix-socket control protocol lets any other process file a task through the same code path the UI uses.
+    nl: Een native macOS-client die veel agent-taken naast elkaar draait in plaats van losse terminalpanelen. Ingebedde terminals beheren het proces, en een Unix-socketprotocol laat elk ander proces een taak aanmaken via exact hetzelfde codepad als de UI.
+  tech: [Swift 6, SwiftUI, Ghostty, Unix sockets, PTY, XcodeGen, Swift Testing]
 
 - type:
     en: Infrastructure
