@@ -3,11 +3,6 @@ title: "Computer Science Is Dead. Again."
 date: "2025-12-03T00:00:00Z"
 draft: false
 ---
----
-title: "Computer Science Is Dead. Again."
-date: "2025-12-03T00:00:00Z"
-draft: false
----
 
 ### The Death Announcement Cycle
 
@@ -36,4 +31,3 @@ That's the beautiful thing about studying any discipline deeply. It's not just a
 Ten years from now, a hundred years from now, the value of understanding systems will remain. AI might write code faster than us. But the excitement of comprehending how things work—that's yours forever.
 
 Computer science isn't dead. The people declaring its death just never understood what it was really about.
-

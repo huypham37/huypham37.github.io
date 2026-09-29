@@ -4,13 +4,6 @@ description: Why AI Won't Replace Software Engineers
 date: "2025-11-28T00:00:00Z"
 draft: false
 ---
----
-title: "The Rise of DIY Software"
-description: Why AI Won't Replace Software Engineers
-date: "2025-11-28T00:00:00Z"
-draft: false
----
-
 
 ### The Question Everyone's Asking
 
@@ -58,4 +51,3 @@ But AI will democratize software creation for personal use. If you don't care ab
 The future isn't AI versus engineers. It's AI-assisted individuals creating personal tools while engineers continue solving the hard problems that AI cannot. We need to look at software engineering from a different angle than we did before—the landscape has changed, but the need for deep expertise hasn't gone away.
 
 Welcome to the age of DIY software.
-
