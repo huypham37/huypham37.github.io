@@ -1,7 +1,6 @@
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { site } from '@/lib/site';
-import '../../styles/page.css';
 
 export const metadata: Metadata = {
   title: site.name,
