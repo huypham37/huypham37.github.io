@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import { Fragment } from 'react';
 import SiteShell from '@/components/SiteShell';
 import Footer from '@/components/Footer';
 import { getIntro, getPageGroups, renderPageBody } from '@/lib/content';
@@ -31,26 +30,8 @@ export default async function IndexPage() {
 
       <div className="rule" />
 
-      <section className="reveal" style={reveal(3)}>
-        <div className="section-head">
-          <h2>Currently</h2>
-          <span>a quiet snapshot</span>
-        </div>
-
-        <dl className="now">
-          {site.now.map(entry => (
-            <Fragment key={entry.label}>
-              <dt>{entry.label}</dt>
-              <dd>
-                {entry.href ? <Link href={entry.href}>{entry.text}</Link> : entry.text}
-              </dd>
-            </Fragment>
-          ))}
-        </dl>
-      </section>
-
       {Object.entries(groups).map(([section, pages], index) => (
-        <section className="entries reveal" key={section} id={slugify(section)} style={reveal(4 + index)}>
+        <section className="entries reveal" key={section} id={slugify(section)} style={reveal(3 + index)}>
           <div className="section-head">
             <h2>{section}</h2>
             <span>
@@ -73,7 +54,7 @@ export default async function IndexPage() {
         </section>
       ))}
 
-      <Footer index={4 + Object.keys(groups).length} />
+      <Footer index={3 + Object.keys(groups).length} />
     </SiteShell>
   );
 }

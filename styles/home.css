@@ -49,34 +49,6 @@
   color: var(--muted);
 }
 
-.now {
-  display: grid;
-  grid-template-columns: 115px minmax(0, 1fr);
-  border-top: 1px solid var(--line);
-}
-
-.now dt,
-.now dd {
-  padding: 16px 0;
-  border-bottom: 1px solid var(--line);
-  font-size: var(--fs-ui);
-}
-
-.now dt { color: var(--muted); }
-
-.now dd {
-  font-family: var(--serif);
-  font-size: 17px;
-}
-
-.now a {
-  text-decoration: none;
-  border-bottom: 1px solid var(--accent-soft);
-  transition: color .18s ease;
-}
-
-.now a:hover { color: var(--accent); }
-
 /* ─── section index ───────────────────────────────────── */
 .entries { margin-top: 62px; }
 

@@ -58,8 +58,6 @@
 @media (max-width: 640px) {
   .shell { width: calc(100% - 32px); }
 
-  .now { grid-template-columns: 90px minmax(0, 1fr); }
-
   .entry {
     grid-template-columns: minmax(0, 1fr) auto;
     column-gap: 14px;
