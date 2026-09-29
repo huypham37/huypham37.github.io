@@ -14,7 +14,8 @@
 
 main {
   max-width: var(--measure);
-  padding-top: 108px;
+  /* the column starts on the shared first line, see --top-line */
+  padding-top: var(--top-line);
   min-width: 0;
 }
 
@@ -52,8 +53,8 @@ main {
 
 .rail__logo {
   flex: 0 0 auto;
-  width: 42px;
-  height: 42px;
+  width: var(--logo-size);
+  height: var(--logo-size);
   display: grid;
   place-items: center;
   transition: transform .25s ease;
@@ -64,8 +65,8 @@ main {
 /* The mark is a mask, not an <img>, so it inherits the theme ink exactly
    instead of rendering as a dark plate in dark mode. */
 .logo-mark {
-  width: 42px;
-  height: 42px;
+  width: var(--logo-size);
+  height: var(--logo-size);
   background-color: var(--ink);
   -webkit-mask: url("/logo-mark.png") center / contain no-repeat;
   mask: url("/logo-mark.png") center / contain no-repeat;
@@ -73,16 +74,21 @@ main {
 
 /* ─── rail nav ────────────────────────────────────────── */
 .rail__nav {
-  margin-top: 82px;
+  /* Drops the nav onto the shared first line: main starts at --top-line and the
+     rail has the logo above the nav, so only the logo comes off. */
+  margin-top: calc(var(--top-line) - var(--logo-size));
   display: flex;
   flex-direction: column;
 }
 
 .rail__nav a {
-  padding: 6px 0;
+  /* padding sits below the text only — top padding would push the first entry
+     off the shared line */
+  padding: 0 0 12px;
   width: max-content;
   color: var(--muted);
   font-size: var(--fs-ui);
+  line-height: var(--line-box); /* same line box as the eyebrow/meta line */
   text-decoration: none;
   transition: color .18s ease, transform .18s ease;
 }

@@ -24,6 +24,15 @@
   --toc:      200px;   /* right-edge table of contents */
   --toc-min:  1400px;  /* viewport width at which the toc has room */
 
+  /* Where the first line of text sits in every column, measured from the top
+     of the shell. The rail derives its own offset from it (it has a logo above
+     the nav), so the two columns share one line without a second magic
+     number. --line-box is the height of that line's box, shared by the caps
+     eyebrow/meta line and a rail link so the two agree on where the text is. */
+  --top-line:  108px;
+  --line-box:  22px;
+  --logo-size: 42px;
+
   /* ── type scale ── */
   --fs-display: clamp(54px, 7vw, 92px);
   --fs-title:   clamp(36px, 4.6vw, 54px);
@@ -91,6 +100,7 @@ a { color: inherit; }
 .eyebrow,
 .meta {
   font-size: var(--fs-micro);
+  line-height: var(--line-box); /* so it shares a line with the rail's first link */
   text-transform: uppercase;
   letter-spacing: .13em;
   color: var(--muted);

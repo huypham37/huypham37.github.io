@@ -1,9 +1,14 @@
 /* ─── page head ───────────────────────────────────────── */
-.page-head { margin: 8px 0 0; }
+/* No top margin: this meta line is the column's first line, so it has to land
+   on --top-line like the rail's first entry. */
+.page-head { margin: 0; }
 
+/* The caps line duplicates .eyebrow/.meta from base.css, including the shared
+   line box, so keep the two in step. */
 .page-head .meta {
   margin-bottom: 20px;
   font-size: var(--fs-micro);
+  line-height: var(--line-box);
   text-transform: uppercase;
   letter-spacing: .13em;
   color: var(--muted);

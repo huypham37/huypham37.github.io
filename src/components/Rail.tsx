@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import RailSpy from './RailSpy';
 import ThemeSwitch from './ThemeSwitch';
 import { site } from '@/lib/site';
 import { slugify } from '@/lib/utils';
@@ -26,6 +27,10 @@ export default function Rail({ groups, currentUrl }: RailProps) {
         <Link href="/" aria-current={currentUrl === '/' ? 'page' : undefined}>
           Entrance
         </Link>
+
+        {/* Only the entrance page carries the section anchors, so it is the
+            only page where the scroll position can decide the highlight. */}
+        {currentUrl === '/' && <RailSpy sections={sections} />}
 
         {sections.map(section => {
           const active = groups[section].some(page => page.url === currentUrl);
