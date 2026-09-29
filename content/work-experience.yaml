@@ -62,3 +62,27 @@
         en: LLM-assisted tooling that reads engineering documents and produces STRIDE and MITRE ATT&CK threat lists plus mitigations.
         nl: LLM-ondersteunde tooling die engineeringdocumenten leest en dreigingslijsten volgens STRIDE en MITRE ATT&CK plus mitigaties oplevert.
   tech: [Kubernetes, Linux, Docker, ArgoCD, Terraform, Prometheus, Local LLM, TypeScript, PostgreSQL, Redis]
+
+- company: MGM Technology Partners Vietnam
+  mark: MGM
+  title:
+    en: Software / DevOps Engineer
+    nl: Software / DevOps Engineer
+  duration:
+    en: Feb 2022 – Jun 2025 · Remote
+    nl: feb 2022 – jun 2025 · Remote
+  summary:
+    en: Software and DevOps engineering on a client e-commerce platform, shipping Java and React features while owning the pipelines and Azure Kubernetes workloads they run on.
+    nl: Software- en DevOps-engineering op een e-commerceplatform voor een klant, met Java- en React-features en verantwoordelijkheid voor de pipelines en Azure Kubernetes-workloads erachter.
+  highlights:
+    - en: Developed and maintained a client e-commerce web platform using Java, Spring, React and TypeScript.
+      nl: Ontwikkelde en onderhield een e-commerceplatform voor een klant met Java, Spring, React en TypeScript.
+    - en: Built and maintained Jenkins CI/CD pipelines supporting 12 services across development, staging and production environments.
+      nl: Bouwde en onderhield Jenkins CI/CD-pipelines voor 12 services in development-, staging- en productieomgevingen.
+    - en: Deployed and operated application workloads on Microsoft Azure using AKS, Azure Key Vault and Azure Monitor, supporting development, staging and production environments.
+      nl: Deployde en beheerde applicatieworkloads op Microsoft Azure met AKS, Azure Key Vault en Azure Monitor, voor development-, staging- en productieomgevingen.
+    - en: Containerized application services with Docker and managed Kubernetes deployments using Helm, including health checks, resource configuration and rolling updates.
+      nl: Containeriseerde applicatieservices met Docker en beheerde Kubernetes-deployments met Helm, inclusief health checks, resourceconfiguratie en rolling updates.
+    - en: Investigated and resolved production application and infrastructure issues across Azure, Linux, Docker and CI/CD pipelines.
+      nl: Onderzocht en verhielp productieproblemen in applicaties en infrastructuur over Azure, Linux, Docker en CI/CD-pipelines.
+  tech: [Java, Spring, React, TypeScript, Jenkins, Docker, Kubernetes, Helm, Azure, AKS, Azure Key Vault, Azure Monitor, Linux]
